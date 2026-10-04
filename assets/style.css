@@ -307,3 +307,7 @@ img, svg { max-width: 100%; }
   color: #fff; background: linear-gradient(135deg, var(--brand-solid), var(--brand2));
 }
 @media (max-width: 560px) { .intro { flex-direction: column; } }
+
+.c-blue { --accent: #0369a1; }
+:root[data-theme="dark"] .c-blue { --accent: #38bdf8; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .c-blue { --accent: #38bdf8; } }
