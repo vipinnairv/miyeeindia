@@ -72,6 +72,7 @@ def shell(prefix, current, title, desc, body):
 <footer class="site-footer">
   <div class="wrap">
     <div class="links">{foot}</div>
+    <p class="tagline">Free products and tools to help the MSME business community grow.</p>
     <p>Built by Vipin Nair · <a href="mailto:miyee.india@gmail.com">miyee.india@gmail.com</a></p>
   </div>
 </footer>

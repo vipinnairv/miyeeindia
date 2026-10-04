@@ -307,3 +307,25 @@ img, svg { max-width: 100%; }
   color: #fff; background: linear-gradient(135deg, var(--brand-solid), var(--brand2));
 }
 @media (max-width: 560px) { .intro { flex-direction: column; } }
+
+.c-blue { --accent: #0369a1; }
+:root[data-theme="dark"] .c-blue { --accent: #38bdf8; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .c-blue { --accent: #38bdf8; } }
+
+/* ---------- Free messaging ---------- */
+.tagline { color: var(--text); font-weight: 600; margin-bottom: 4px; }
+.free-pill {
+  position: absolute; top: 22px; right: 22px;
+  padding: 3px 11px; border-radius: 999px;
+  font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--on-accent); background: var(--brand-solid);
+}
+
+/* ---------- Product briefs ---------- */
+.feat { list-style: none; padding: 0; margin: 0 0 14px; color: var(--muted); font-size: .94rem; }
+.feat li { position: relative; padding-left: 22px; margin-bottom: 7px; }
+.feat li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 800; }
+.best { font-size: .9rem; margin-bottom: 18px; flex: none; }
+.card .best { color: var(--muted); }
+.card .feat + .best { flex: none; }
+.card .feat { flex: 1; }
