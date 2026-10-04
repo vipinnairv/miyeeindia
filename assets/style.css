@@ -271,3 +271,12 @@ img, svg { max-width: 100%; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .card:hover, .card:focus-within, .btn:hover, .launch:hover { transform: none; }
 }
+
+/* ---------- Downloads ---------- */
+.c-orange { --accent: #d9480f; }
+:root[data-theme="dark"] .c-orange { --accent: #ff8a4c; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .c-orange { --accent: #ff8a4c; } }
+.meta { color: var(--muted); font-size: .85rem; margin: -6px 0 16px; }
+.steps { padding-left: 1.2em; color: var(--muted); }
+.steps li { margin-bottom: .5em; }
+.note { font-size: .9rem; color: var(--muted); }
