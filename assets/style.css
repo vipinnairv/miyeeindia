@@ -280,3 +280,18 @@ img, svg { max-width: 100%; }
 .steps { padding-left: 1.2em; color: var(--muted); }
 .steps li { margin-bottom: .5em; }
 .note { font-size: .9rem; color: var(--muted); }
+
+/* ---------- Blog ---------- */
+.post-card h3 a { color: inherit; text-decoration: none; }
+.post-card h3 a::after { content: ""; position: absolute; inset: 0; } /* whole card clickable */
+.post-meta { color: var(--muted); font-size: .85rem; margin: 0 0 10px; }
+.read-more { color: var(--accent); font-weight: 700; font-size: .92rem; }
+.article { max-width: 720px; margin: 0 auto; }
+.article h2 { font-size: 1.5rem; margin-top: 1.8em; }
+.article h3 { font-size: 1.2rem; margin-top: 1.5em; }
+.article p, .article li { color: var(--text); }
+.article ul, .article ol { padding-left: 1.3em; margin: 0 0 1em; }
+.article li { margin-bottom: .35em; }
+.back-link { display: inline-block; margin-bottom: 18px; font-weight: 600; text-decoration: none; }
+.card-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.text-link { color: var(--accent); font-weight: 700; font-size: .92rem; }
