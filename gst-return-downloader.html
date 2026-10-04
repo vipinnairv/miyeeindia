@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Services | MiyeeIndia Tech Labs</title>
-<meta name="description" content="Our services page is on the way.">
+<title>GST Return Downloader | MiyeeIndia Tech Labs</title>
+<meta name="description" content="Install guide for the free GST Return Downloader extension for Chrome and Edge.">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23F26B21'/%3E%3Ctext x='16' y='23' font-size='20' font-weight='800' text-anchor='middle' fill='%23ffffff' font-family='sans-serif'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +19,7 @@
   <div class="wrap nav-inner">
     <a class="brand" href="index.html">Miyee<span>India</span> Tech Labs</a>
     <nav class="nav-tools" aria-label="Main">
-      <ul class="nav-links" id="nav-links"><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="downloads.html">Free Downloads</a></li><li><a href="blog.html">Blog</a></li><li><a href="services.html" aria-current="page">Services</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li></ul>
+      <ul class="nav-links" id="nav-links"><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="downloads.html" aria-current="page">Free Downloads</a></li><li><a href="blog.html">Blog</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact Us</a></li></ul>
       <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle theme">☀</button>
       <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">☰</button>
     </nav>
@@ -29,18 +29,28 @@
 
 <section class="page-head">
   <div class="wrap">
-    <span class="badge">SERVICES</span>
-    <h1>Services</h1>
-    <p>Our services page is on the way.</p>
+    <span class="badge">CHROME &amp; EDGE EXTENSION</span>
+    <h1>GST Return <span style="color:var(--brand)">Downloader</span></h1>
+    <p>Bulk download GSTR-1, GSTR-2B and GSTR-3B from the GST portal. Free, open source, and runs only in your browser.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="downloads/miyeeindia-gst-return-downloader-v1.2.0.zip" download>Download ZIP (v1.2.0)</a>
+      <a class="btn btn-ghost" href="downloads/MiyeeIndia_GST_Return_Downloader_User_Guide.docx" download>User Guide (DOCX)</a>
+    </div>
   </div>
 </section>
 <section class="section">
   <div class="wrap prose">
-    <div class="panel soon">
-      <h2>Coming soon</h2>
-      <p>This page is being prepared. Meanwhile, explore our tools.</p>
-      <a class="btn btn-primary" href="products.html">View Products</a>
+    <div class="panel">
+      <h2>How to install</h2>
+      <ol class="steps">
+        <li>Download the ZIP above and extract it to a folder you will keep.</li>
+        <li>Open <code>chrome://extensions</code> (or <code>edge://extensions</code>) and turn on <strong>Developer mode</strong>.</li>
+        <li>Click <strong>Load unpacked</strong> and select the extracted <code>miyeeindia-gst-return-downloader</code> folder.</li>
+        <li>Log in to gst.gov.in, open the Returns Dashboard, then click the extension icon to start.</li>
+      </ol>
+      <p class="note">You log in to the GST portal yourself. Your user ID, password and OTP are never seen or stored by the tool. The portal may change its layout at any time, which can stop the tool from working until it is updated.</p>
     </div>
+    <p style="margin-top:24px"><a class="back-link" href="downloads.html">← Back to Free Downloads</a></p>
   </div>
 </section>
 </main>
