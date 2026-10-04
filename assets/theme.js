@@ -9,7 +9,7 @@
   function current() {
     var t = root.getAttribute("data-theme");
     if (t) return t;
-    return window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    return window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   }
 
   document.addEventListener("DOMContentLoaded", function () {
