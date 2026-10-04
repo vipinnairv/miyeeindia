@@ -295,3 +295,15 @@ img, svg { max-width: 100%; }
 .back-link { display: inline-block; margin-bottom: 18px; font-weight: 600; text-decoration: none; }
 .card-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
 .text-link { color: var(--accent); font-weight: 700; font-size: .92rem; }
+
+/* ---------- About: founder intro ---------- */
+.intro { display: flex; gap: 24px; align-items: flex-start; }
+.intro h2 { font-size: 1.8rem; margin-bottom: .4em; }
+.intro p { color: var(--muted); }
+.avatar {
+  flex: none; width: 88px; height: 88px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-family: var(--font-display); font-weight: 800; font-size: 1.9rem;
+  color: #fff; background: linear-gradient(135deg, var(--brand-solid), var(--brand2));
+}
+@media (max-width: 560px) { .intro { flex-direction: column; } }
