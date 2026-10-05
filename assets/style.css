@@ -329,3 +329,7 @@ img, svg { max-width: 100%; }
 .card .best { color: var(--muted); }
 .card .feat + .best { flex: none; }
 .card .feat { flex: 1; }
+
+.c-indigo { --accent: #4338ca; }
+:root[data-theme="dark"] .c-indigo { --accent: #818cf8; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .c-indigo { --accent: #818cf8; } }
