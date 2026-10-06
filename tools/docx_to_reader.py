@@ -68,7 +68,7 @@ def split_chapters(doc_html, skip):
 
 
 def tidy(h):
-    h = h.replace(" — ", " - ").replace("—", "-")
+    h = h.replace(" \u2014 ", " - ").replace("\u2014", "-")
     h = re.sub(r"<p>(\s|&nbsp;)*</p>", "", h)
     h = re.sub(r"(<table.*?</table>)", r'<div class="tbl">\1</div>', h, flags=re.S)
     return h
