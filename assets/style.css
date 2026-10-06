@@ -418,3 +418,5 @@ img, svg { max-width: 100%; }
 .plain { padding-left: 1.1em; margin: 0; color: var(--muted); }
 .plain li { margin-bottom: .45em; }
 @media (max-width: 760px) { .profile { grid-template-columns: 1fr; gap: 24px; } .photo { max-width: 320px; margin: 0 auto; } }
+
+.site-footer .links.social a { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; }
