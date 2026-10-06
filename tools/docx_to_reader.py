@@ -121,6 +121,7 @@ def main():
     crumbs = f'<p class="crumbs"><a href="../../library.html">Library</a> / <a href="index.html">{title}</a></p>'
 
     def page(current, inner, ptitle, desc):
+        path = f"read/{a.slug}/{current}"
         body = f'''<div class="reader" data-guard>
   <button class="toc-toggle" type="button" aria-expanded="false" aria-controls="toc">Contents</button>
   <aside class="toc" id="toc" aria-label="Contents">
@@ -135,7 +136,7 @@ def main():
   </article>
 </div>
 <script src="../../assets/reader.js"></script>'''
-        return shell("../../", "library.html", f"{ptitle} | {a.title} | MiyeeIndia Tech Labs", desc, body)
+        return shell("../../", "library.html", f"{ptitle} | {a.title} | MiyeeIndia Tech Labs", desc, body, path)
 
     # cover / index
     cover = tidy(fix_links(front, "index.html"))
