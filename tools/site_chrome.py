@@ -21,7 +21,7 @@ def footer(prefix, pages):
   <div class="wrap footer-grid">
     <div class="footer-brand">
       {brand(prefix)}
-      <p>Free products and tools to help the MSME business community grow.</p>
+      <p>Free Apps / Tools to help the MSME business community grow.</p>
       <p class="fineprint">A personal, non-commercial initiative by Vipin Nair. Views and content are personal and do not represent any employer.</p>
     </div>
     <nav class="footer-col" aria-label="Footer">
