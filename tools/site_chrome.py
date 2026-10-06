@@ -52,3 +52,38 @@ def icons(prefix):
     return (f'<link rel="icon" href="{prefix}assets/favicon.svg" type="image/svg+xml">\n'
             f'<link rel="icon" href="{prefix}assets/favicon-32.png" sizes="32x32" type="image/png">\n'
             f'<link rel="apple-touch-icon" href="{prefix}assets/apple-touch-icon.png">')
+
+
+SITE_URL = "https://vipinnairv.github.io/miyeeindia/"
+OG_IMAGE = SITE_URL + "assets/og-image.jpg"
+
+
+def social(title, desc, path=None):
+    """Open Graph and Twitter card tags so shared links show a rich preview."""
+    import html as _h
+    t, d = _h.escape(title, quote=True), _h.escape(desc, quote=True)
+    url = SITE_URL + (path or "")
+    if path in ("", "index.html"):
+        url = SITE_URL
+    tags = [
+        f'<link rel="canonical" href="{url}">' if path is not None else "",
+        '<meta property="og:type" content="website">',
+        '<meta property="og:site_name" content="MiyeeIndia Tech Labs">',
+        '<meta property="og:locale" content="en_IN">',
+        f'<meta property="og:title" content="{t}">',
+        f'<meta property="og:description" content="{d}">',
+        f'<meta property="og:url" content="{url}">' if path is not None else "",
+        f'<meta property="og:image" content="{OG_IMAGE}">',
+        '<meta property="og:image:type" content="image/jpeg">',
+        '<meta property="og:image:width" content="1200">',
+        '<meta property="og:image:height" content="630">',
+        '<meta property="og:image:alt" content="Vipin Nair, MiyeeIndia Tech Labs: free apps, tools and guides for the MSME community">',
+        '<meta name="twitter:card" content="summary_large_image">',
+        '<meta name="twitter:site" content="@vipinnairv">',
+        '<meta name="twitter:creator" content="@vipinnairv">',
+        f'<meta name="twitter:title" content="{t}">',
+        f'<meta name="twitter:description" content="{d}">',
+        f'<meta name="twitter:image" content="{OG_IMAGE}">',
+        '<meta name="author" content="Vipin Nair">',
+    ]
+    return "\n".join(x for x in tags if x)

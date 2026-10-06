@@ -25,7 +25,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from site_chrome import brand, footer, icons  # noqa: E402
+from site_chrome import brand, footer, icons, social  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 POSTS = ROOT / "blog" / "posts"
@@ -36,7 +36,7 @@ PAGES = [("index.html", "About Me"), ("home.html", "Hub"), ("products.html", "Ap
 ACCENTS = ["c-orange", "c-teal", "c-violet", "c-pink", "c-amber"]
 
 
-def shell(prefix, current, title, desc, body):
+def shell(prefix, current, title, desc, body, path=None):
     nav = "".join(
         '<li><a href="%s%s"%s>%s</a></li>' % (prefix, f, ' aria-current="page"' if f == current else "", n)
         for f, n in PAGES)
@@ -49,6 +49,7 @@ def shell(prefix, current, title, desc, body):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{t}</title>
 <meta name="description" content="{d}">
+{social(title, desc, path)}
 <meta name="theme-color" content="#ffffff">
 {icons(prefix)}
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -168,7 +169,7 @@ def main():
   </div>
 </section>'''
         (out_dir / f'{p["slug"]}.html').write_text(
-            shell("../", "blog.html", f'{p["title"]} | {SITE}', p["summary"], body), encoding="utf-8")
+            shell("../", "blog.html", f'{p["title"]} | {SITE}', p["summary"], body, f'blog/{p["slug"]}.html'), encoding="utf-8")
         tag = html.escape(p["tags"][0]) if p["tags"] else "Update"
         cards.append(f'''    <article class="card post-card {ACCENTS[i % len(ACCENTS)]}">
       <span class="tag">{tag}</span>
@@ -193,7 +194,7 @@ def main():
   </div>
 </section>'''
     (ROOT / "blog.html").write_text(
-        shell("", "blog.html", f"Blog | {SITE}", "News, updates and notes from MiyeeIndia Tech Labs.", index), encoding="utf-8")
+        shell("", "blog.html", f"Blog | {SITE}", "News, updates and notes from MiyeeIndia Tech Labs.", index, "blog.html"), encoding="utf-8")
     print(f"Built {len(posts)} post(s) and blog.html")
 
 
