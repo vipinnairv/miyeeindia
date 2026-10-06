@@ -11,7 +11,7 @@ This is the home for news and updates from MiyeeIndia Tech Labs, a personal, non
 
 - Updates when we release or improve a tool
 - Notes on GST, income tax and compliance topics
-- Tips for getting more out of our apps
+- Tips for getting more out of our Apps / Tools
 
 ## What is on the site today
 

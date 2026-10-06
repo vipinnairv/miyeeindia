@@ -184,7 +184,7 @@ def main():
   <div class="wrap">
     <span class="badge">BLOG</span>
     <h1>News and <span style="color:var(--brand)">updates</span></h1>
-    <p>App updates, tax and compliance notes, and tips from MiyeeIndia Tech Labs.</p>
+    <p>Updates, tax and compliance notes, and tips from MiyeeIndia Tech Labs.</p>
   </div>
 </section>
 <section class="section">
