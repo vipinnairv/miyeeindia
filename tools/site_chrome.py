@@ -42,4 +42,13 @@ def footer(prefix, pages):
     <p>© 2026 Vipin Nair. All rights reserved.</p>
     <p>Free to use · No ads</p>
   </div>
+  <div class="wrap footer-disclaimer">
+    <p><strong>Disclaimer:</strong> This is a portfolio site for non-commercial use, community help, learning, and growing.</p>
+  </div>
 </footer>'''
+
+
+def icons(prefix):
+    return (f'<link rel="icon" href="{prefix}assets/favicon.svg" type="image/svg+xml">\n'
+            f'<link rel="icon" href="{prefix}assets/favicon-32.png" sizes="32x32" type="image/png">\n'
+            f'<link rel="apple-touch-icon" href="{prefix}assets/apple-touch-icon.png">')
