@@ -633,3 +633,39 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.025em; }
 .footer-disclaimer { padding: 14px 20px 22px; border-top: 1px solid rgba(148, 163, 184, .12); }
 .footer-disclaimer p { margin: 0; font-size: .82rem; color: #94a3b8; text-align: center; }
 .footer-disclaimer strong { color: #e2e8f0; }
+
+/* ---------- Mobile fixes (Oct 2026) ---------- */
+@media (max-width: 760px) {
+  .profile { grid-template-columns: 1fr; gap: 24px; }
+  .photo { max-width: 200px; margin: 0 auto; }
+  .profile-text h1 { font-size: 2.2rem; }
+  .profile-text .role { font-size: .95rem; }
+  .profile-text .lead-in { font-size: 1.08rem; }
+  .profile-text .card-actions .btn { flex: 1 1 auto; justify-content: center; }
+  .badges li { font-size: .78rem; }
+  .section { padding: 48px 0; }
+  .page-head { padding: 48px 0 32px; }
+  .hero { padding: 64px 0 56px; }
+  .hero-cta .btn { width: 100%; max-width: 320px; justify-content: center; }
+  .card { padding: 22px; }
+  .app-head { padding-right: 56px; }
+  .free-pill { top: 18px; right: 18px; }
+  .card-actions { gap: 12px; }
+  .stat-grid b { font-size: 1.6rem; }
+  .doc h1 { font-size: 1.6rem; }
+  .doc .tbl table { font-size: .82rem; }
+  .doc th, .doc td { padding: 6px 8px; }
+  .doc img { max-height: 380px; padding: 6px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+@media (max-width: 380px) {
+  .wrap { padding: 0 16px; }
+  .brand .brand-text { font-size: .9rem; }
+  .brand .logo-mark { width: 28px; height: 28px; font-size: .9rem; }
+  .icon-btn { width: 36px; height: 36px; }
+  .nav-tools { gap: 6px; }
+}
+/* Never allow sideways scrolling on small screens */
+html, body { overflow-x: hidden; }
+img, svg, video { max-width: 100%; height: auto; }
+.app-thumb { height: 56px; }
