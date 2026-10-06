@@ -607,3 +607,29 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.025em; }
 .stat-grid a:hover { color: var(--brand); }
 @media (max-width: 640px) { .stat-grid { grid-template-columns: 1fr 1fr; } .stat-grid > div:nth-child(3) { border-left: 0; } .stat-grid > div:nth-child(n+3) { border-top: 1px solid var(--border); } }
 @media (max-width: 760px) { .photo { max-width: 260px; } .profile-hero { padding: 40px 0 48px; } }
+
+/* ---------- Oct 2026 content update ---------- */
+/* Profile photo: smaller, cropped from the top down to the hands */
+.profile { grid-template-columns: 240px minmax(0, 1fr); gap: 48px; }
+.photo { max-width: 240px; aspect-ratio: 4 / 5; }
+.photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+@media (max-width: 760px) { .photo { max-width: 200px; } }
+
+/* App cards: compact thumbnail beside the name */
+.app-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; padding-right: 64px; }
+.app-thumb { width: 56px; height: 56px; flex: none; border-radius: 14px; object-fit: cover; box-shadow: 0 1px 2px rgba(15, 23, 42, .12); }
+.app-head .tag { margin-bottom: 6px; }
+.app-head h3 { margin: 0; line-height: 1.2; }
+
+/* Library reader images: clean, uniform, readable in both themes */
+.doc img {
+  display: block; width: auto; max-width: 100%; height: auto; max-height: 560px;
+  object-fit: contain; margin: 1.4em auto; padding: 10px;
+  background: #fff; border: 1px solid var(--border); border-radius: 10px; box-shadow: var(--shadow);
+}
+.doc p:has(> img:only-child) { text-align: center; }
+
+/* Footer disclaimer */
+.footer-disclaimer { padding: 14px 20px 22px; border-top: 1px solid rgba(148, 163, 184, .12); }
+.footer-disclaimer p { margin: 0; font-size: .82rem; color: #94a3b8; text-align: center; }
+.footer-disclaimer strong { color: #e2e8f0; }

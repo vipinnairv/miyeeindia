@@ -25,7 +25,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from site_chrome import brand, footer  # noqa: E402
+from site_chrome import brand, footer, icons  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 POSTS = ROOT / "blog" / "posts"
@@ -50,7 +50,7 @@ def shell(prefix, current, title, desc, body):
 <title>{t}</title>
 <meta name="description" content="{d}">
 <meta name="theme-color" content="#ffffff">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23F26B21'/%3E%3Ctext x='16' y='23' font-size='20' font-weight='800' text-anchor='middle' fill='%23ffffff' font-family='sans-serif'%3EM%3C/text%3E%3C/svg%3E">
+{icons(prefix)}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -184,7 +184,7 @@ def main():
   <div class="wrap">
     <span class="badge">BLOG</span>
     <h1>News and <span style="color:var(--brand)">updates</span></h1>
-    <p>Updates, tax and compliance notes, and tips from MiyeeIndia Tech Labs.</p>
+    <p>Updates on new tools and guides, practical notes on tax and compliance, and tips for getting the most from MiyeeIndia Tech Labs.</p>
   </div>
 </section>
 <section class="section">

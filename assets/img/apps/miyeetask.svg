@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="TM">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#0369a1"/></linearGradient></defs>
+<rect width="120" height="120" rx="26" fill="url(#g)"/>
+<rect x="14" y="14" width="92" height="92" rx="18" fill="#fff" fill-opacity=".10"/>
+<text x="60" y="61" text-anchor="middle" dominant-baseline="middle" font-family="Poppins, Segoe UI, Arial, sans-serif" font-size="40" font-weight="700" fill="#fff">TM</text>
+</svg>
