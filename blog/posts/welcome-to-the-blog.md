@@ -11,11 +11,11 @@ This is the home for news and updates from MiyeeIndia Tech Labs, a personal, non
 
 - Updates when we release or improve a tool
 - Notes on GST, income tax and compliance topics
-- Tips for getting more out of our products
+- Tips for getting more out of our apps
 
 ## What is on the site today
 
-- **Products:** MiyeeBooks, MyeeStockBuddy, MiyeeCFO and MiyeePDFPro. See the [Products page](../products.html).
+- **Apps / Tools:** MiyeeBooks, MyeeStockBuddy, MiyeeCFO and MiyeePDFPro. See the [Apps / Tools page](../products.html).
 - **Library:** free reference guides on GST, income tax, Ind AS and markets, to read online. See the [Library](../library.html).
 - **Free downloads:** the GST Return Downloader extension. See [Free Downloads](../downloads.html).
 

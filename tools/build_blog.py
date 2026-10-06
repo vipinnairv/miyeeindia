@@ -30,7 +30,7 @@ from site_chrome import brand, footer  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 POSTS = ROOT / "blog" / "posts"
 SITE = "MiyeeIndia Tech Labs"
-PAGES = [("index.html", "About Me"), ("home.html", "Hub"), ("products.html", "Products"),
+PAGES = [("index.html", "About Me"), ("home.html", "Hub"), ("products.html", "Apps / Tools"),
          ("library.html", "Library"), ("downloads.html", "Free Downloads"), ("blog.html", "Blog"),
          ("contact.html", "Contact Us")]
 ACCENTS = ["c-orange", "c-teal", "c-violet", "c-pink", "c-amber"]
@@ -184,7 +184,7 @@ def main():
   <div class="wrap">
     <span class="badge">BLOG</span>
     <h1>News and <span style="color:var(--brand)">updates</span></h1>
-    <p>Product updates, tax and compliance notes, and tips from MiyeeIndia Tech Labs.</p>
+    <p>App updates, tax and compliance notes, and tips from MiyeeIndia Tech Labs.</p>
   </div>
 </section>
 <section class="section">
