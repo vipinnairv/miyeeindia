@@ -27,8 +27,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 POSTS = ROOT / "blog" / "posts"
 SITE = "MiyeeIndia Tech Labs"
-PAGES = [("index.html", "Home"), ("products.html", "Products"), ("library.html", "Library"),
-         ("downloads.html", "Free Downloads"), ("blog.html", "Blog"), ("about.html", "About Us"),
+PAGES = [("about.html", "About Us"), ("index.html", "Home"), ("products.html", "Products"),
+         ("library.html", "Library"), ("downloads.html", "Free Downloads"), ("blog.html", "Blog"),
          ("contact.html", "Contact Us")]
 ACCENTS = ["c-orange", "c-teal", "c-violet", "c-pink", "c-amber"]
 
