@@ -5,7 +5,7 @@ tags: Announcement
 summary: What this blog is for, and what you can find on MiyeeIndia Tech Labs today.
 ---
 
-This is the home for news and updates from MiyeeIndia Tech Labs, a small software lab that builds focused tools for Indian businesses, finance teams and investors.
+This is the home for news and updates from MiyeeIndia Tech Labs, a personal, non-commercial initiative by Vipin Nair that offers free tools and learning resources for the MSME business community.
 
 ## What you will find here
 
@@ -16,6 +16,7 @@ This is the home for news and updates from MiyeeIndia Tech Labs, a small softwar
 ## What is on the site today
 
 - **Products:** MiyeeBooks, MyeeStockBuddy, MiyeeCFO and MiyeePDFPro. See the [Products page](../products.html).
-- **Free downloads:** the GST Return Downloader and two master guides. See [Free Downloads](../downloads.html).
+- **Library:** free reference guides on GST, income tax, Ind AS and markets, to read online. See the [Library](../library.html).
+- **Free downloads:** the GST Return Downloader extension. See [Free Downloads](../downloads.html).
 
 Questions or suggestions are welcome at miyee.india@gmail.com.

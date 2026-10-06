@@ -27,8 +27,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 POSTS = ROOT / "blog" / "posts"
 SITE = "MiyeeIndia Tech Labs"
-PAGES = [("index.html", "Home"), ("products.html", "Products"), ("downloads.html", "Free Downloads"),
-         ("blog.html", "Blog"), ("services.html", "Services"), ("about.html", "About Us"),
+PAGES = [("index.html", "Home"), ("products.html", "Products"), ("library.html", "Library"),
+         ("downloads.html", "Free Downloads"), ("blog.html", "Blog"), ("about.html", "About Us"),
          ("contact.html", "Contact Us")]
 ACCENTS = ["c-orange", "c-teal", "c-violet", "c-pink", "c-amber"]
 
@@ -72,7 +72,9 @@ def shell(prefix, current, title, desc, body):
 <footer class="site-footer">
   <div class="wrap">
     <div class="links">{foot}</div>
+    <div class="links social"><a href="https://www.linkedin.com/in/vipin-nair-22a789207/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://x.com/vipinnairv" target="_blank" rel="noopener noreferrer">X (Twitter)</a></div>
     <p class="tagline">Free products and tools to help the MSME business community grow.</p>
+    <p class="fineprint">MiyeeIndia Tech Labs is a personal, non-commercial initiative by Vipin Nair. Views and content are personal and do not represent any employer.</p>
     <p>Built by Vipin Nair · <a href="mailto:miyee.india@gmail.com">miyee.india@gmail.com</a></p>
   </div>
 </footer>
