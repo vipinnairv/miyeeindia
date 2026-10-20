@@ -33,6 +33,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <script src="assets/theme.js"></script>
+<script src="miyee-switcher.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -41,6 +42,7 @@
     <a class="brand" href="index.html"><span class="logo-mark" aria-hidden="true">M</span><span class="brand-text">Miyee<span>India</span> Tech Labs</span></a>
     <nav class="nav-tools" aria-label="Main">
       <ul class="nav-links" id="nav-links"><li><a href="index.html">About Me</a></li><li><a href="home.html">Hub</a></li><li><a href="products.html">Apps / Tools</a></li><li><a href="library.html" aria-current="page">Library</a></li><li><a href="downloads.html">Free Downloads</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact Us</a></li></ul>
+      <miyee-app-switcher current-app="hub"></miyee-app-switcher>
       <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle theme">☀</button>
       <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">☰</button>
     </nav>
@@ -131,7 +133,7 @@
   </div>
   <div class="wrap footer-bottom">
     <p>© 2026 Vipin Nair. All rights reserved.</p>
-    <p>Free to use · No ads</p>
+    <p><a href="privacy.html">Privacy</a> · Free to use · No ads</p>
   </div>
   <div class="wrap footer-disclaimer">
     <p><strong>Disclaimer:</strong> This is a portfolio site for non-commercial use, community help, learning, and growing.</p>
