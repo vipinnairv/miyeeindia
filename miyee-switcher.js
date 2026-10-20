@@ -1,4 +1,4 @@
-/*! Miyee Tech Labs app switcher v1.0.0 | <miyee-app-switcher> | zero dependencies | (c) 2026 Vipin Nair */
+/*! Miyee Tech Labs app switcher v1.0.1 | <miyee-app-switcher> | zero dependencies | (c) 2026 Vipin Nair */
 (() => {
   "use strict";
   if (!window.customElements || customElements.get("miyee-app-switcher")) return;
@@ -20,7 +20,8 @@
     { id: "hub", name: "Miyee Tech Labs", sub: "Suite Hub", tag: "Main Suite & Account Hub", color: "#ea580c",
       prod: "https://miyeetechlabs.com/", dev: "https://miyeetechlabs.miyee-india.workers.dev/" },
     { id: "books", name: "Miyee Books", sub: "Accounting & GST", tag: "Cloud Accounting & GST", color: "#10b981",
-      prod: "https://books.miyeetechlabs.com/", dev: "https://miyeebooks.pages.dev/" },
+      prod: "https://books.miyeetechlabs.com/", dev: "https://miyeebooks.miyee-india.workers.dev/",
+      alt: ["https://miyeebooks.pages.dev/"] },
     { id: "cfo", name: "Miyee CFO", sub: "CFO Analytics", tag: "Virtual CFO & Analytics", color: "#6366f1",
       prod: "https://cfo.miyeetechlabs.com/", dev: "https://miyeecfo.miyee-india.workers.dev/" },
     { id: "task", name: "Miyee Task", sub: "Tasks & Workflows", tag: "Compliance & Workflows", color: "#f59e0b",
@@ -125,7 +126,7 @@ a{color:inherit;text-decoration:none}
       const here = (location.origin + location.pathname).toLowerCase();
       // Longest match wins, so the hub never claims an app that lives under it.
       let best = "", len = 0;
-      for (const app of APPS) for (const u of [app.prod, app.dev]) {
+      for (const app of APPS) for (const u of [app.prod, app.dev, ...(app.alt || [])]) {
         const base = u.toLowerCase().replace(/\/$/, "");
         if ((here === base || here.startsWith(base + "/")) && base.length > len) { best = app.id; len = base.length; }
       }
@@ -217,5 +218,5 @@ ${on ? '<span class="cur">Current</span>' : ""}<span class="nt" role="link" tabi
   }
 
   customElements.define("miyee-app-switcher", MiyeeAppSwitcher);
-  window.MiyeeAppSwitcher = { apps: APPS, version: "1.0.0" };
+  window.MiyeeAppSwitcher = { apps: APPS, version: "1.0.1" };
 })();
