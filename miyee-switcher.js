@@ -1,4 +1,4 @@
-/*! Miyee Tech Labs app switcher v1.0.1 | <miyee-app-switcher> | zero dependencies | (c) 2026 Vipin Nair */
+/*! Miyee Tech Labs app switcher v1.0.2 | <miyee-app-switcher> | zero dependencies | (c) 2026 Vipin Nair */
 (() => {
   "use strict";
   if (!window.customElements || customElements.get("miyee-app-switcher")) return;
@@ -99,7 +99,7 @@ a{color:inherit;text-decoration:none}
       this._mq = window.matchMedia && matchMedia("(prefers-color-scheme: dark)");
       this._mq && this._mq.addEventListener && this._mq.addEventListener("change", this._sync);
       this._mo = new MutationObserver(this._sync);
-      this._mo.observe(document.documentElement, { attributes: true, attributeFilter: ["class", "data-theme", "data-bs-theme"] });
+      this._mo.observe(document.documentElement, { attributes: true, attributeFilter: ["class", "data-theme", "data-bs-theme", "data-color-scheme"] });
     }
 
     disconnectedCallback() {
@@ -137,7 +137,7 @@ a{color:inherit;text-decoration:none}
       const t = (this.getAttribute("theme") || "auto").toLowerCase();
       let dark = t === "dark";
       if (t === "auto") {
-        const h = document.documentElement, mark = (h.dataset.theme || h.dataset.bsTheme || "").toLowerCase();
+        const h = document.documentElement, mark = (h.dataset.theme || h.dataset.bsTheme || h.dataset.colorScheme || "").toLowerCase();
         if (h.classList.contains("dark") || mark === "dark") dark = true;
         else if (h.classList.contains("light") || mark === "light") dark = false;
         else dark = !!(this._mq ? this._mq.matches : window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches);
@@ -218,5 +218,5 @@ ${on ? '<span class="cur">Current</span>' : ""}<span class="nt" role="link" tabi
   }
 
   customElements.define("miyee-app-switcher", MiyeeAppSwitcher);
-  window.MiyeeAppSwitcher = { apps: APPS, version: "1.0.1" };
+  window.MiyeeAppSwitcher = { apps: APPS, version: "1.0.2" };
 })();
