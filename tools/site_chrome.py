@@ -40,7 +40,7 @@ def footer(prefix, pages):
   </div>
   <div class="wrap footer-bottom">
     <p>© 2026 Vipin Nair. All rights reserved.</p>
-    <p>Free to use · No ads</p>
+    <p><a href="{prefix}privacy.html">Privacy</a> · Free to use · No ads</p>
   </div>
   <div class="wrap footer-disclaimer">
     <p><strong>Disclaimer:</strong> This is a portfolio site for non-commercial use, community help, learning, and growing.</p>

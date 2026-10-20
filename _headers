@@ -1,0 +1,7 @@
+# Cloudflare static-asset headers.
+# The shared app switcher is loaded by other Miyee apps: keep it cross-origin friendly and
+# short-cached so one update reaches every app within minutes.
+/miyee-switcher.js
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=300, must-revalidate
+  Content-Type: application/javascript; charset=utf-8

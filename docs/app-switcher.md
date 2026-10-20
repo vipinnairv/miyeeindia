@@ -1,0 +1,85 @@
+# Miyee app switcher (`<miyee-app-switcher>`)
+
+A zero-dependency web component (Shadow DOM, so no style clashes) that adds the
+9-dot Miyee Tech Labs app launcher to any page. The single source file is
+`miyee-switcher.js` at the root of this repo, published with the hub site at:
+
+    https://miyeetechlabs.miyee-india.workers.dev/miyee-switcher.js
+
+Every app loads that one file, so editing it updates all apps within about five
+minutes (it is served with a 5-minute cache, see `_headers`).
+
+## Add it to an app (2 lines)
+
+In the page `<head>`:
+
+```html
+<script src="https://miyeetechlabs.miyee-india.workers.dev/miyee-switcher.js" defer></script>
+```
+
+In the navbar, where the button should appear:
+
+| App | Tag |
+| --- | --- |
+| Miyee Books | `<miyee-app-switcher current-app="books"></miyee-app-switcher>` |
+| Miyee CFO | `<miyee-app-switcher current-app="cfo"></miyee-app-switcher>` |
+| Miyee Task | `<miyee-app-switcher current-app="task"></miyee-app-switcher>` |
+| Miyee PDF Pro | `<miyee-app-switcher current-app="pdf"></miyee-app-switcher>` |
+| Hub site | `<miyee-app-switcher current-app="hub"></miyee-app-switcher>` |
+
+`current-app` is optional: without it the component works out the current app
+from the page URL.
+
+## Attributes
+
+| Attribute | Values | Default |
+| --- | --- | --- |
+| `current-app` | `hub`, `books`, `cfo`, `task`, `pdf` | detected from URL |
+| `theme` | `auto`, `light`, `dark` | `auto` (reads `html.dark`, `data-theme`, then the OS setting) |
+| `variant` | `bar` adds a slim 40px top bar with the suite name | button only |
+| `align` | `left` opens the menu to the right of the button | opens to the left |
+| `cmd-k` | present = Ctrl/Cmd + K also toggles the menu | off |
+| `custom-domain` | `true` / `false` forces the URL set | script default |
+
+Keyboard: Alt + M toggles, Esc closes, arrow keys move between apps.
+Click outside closes. Ctrl/Cmd + click, or the small arrow icon, opens an app in a new tab.
+
+Events: `miyee-switcher-open` and `miyee-switcher-close` bubble from the element.
+
+## Switching to miyeetechlabs.com
+
+The domain is not live yet, so the component uses the current
+`workers.dev` / `pages.dev` / `github.io` addresses. When the domain and its
+subdomains (`books.`, `cfo.`, `task.`, `pdf.`) are set up:
+
+1. In `miyee-switcher.js`, set `const USE_CUSTOM_DOMAIN = true;`
+2. Change the `<script src>` in each app to `https://miyeetechlabs.com/miyee-switcher.js`.
+
+Pages already served from `*.miyeetechlabs.com` switch to the custom URLs
+automatically, even before step 1.
+
+## React
+
+Use `integrations/react/MiyeeAppSwitcher.jsx`:
+
+```jsx
+import MiyeeAppSwitcher from "./MiyeeAppSwitcher";
+<MiyeeAppSwitcher currentApp="books" />
+```
+
+TypeScript projects can declare the element once:
+
+```ts
+declare namespace JSX {
+  interface IntrinsicElements {
+    "miyee-app-switcher": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
+      "current-app"?: string; theme?: string; variant?: string; align?: string; "cmd-k"?: string; "custom-domain"?: string;
+    };
+  }
+}
+```
+
+## Content Security Policy
+
+If an app sends a CSP header, add the hub origin to `script-src`, for example
+`script-src 'self' https://miyeetechlabs.miyee-india.workers.dev`.

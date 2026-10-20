@@ -57,6 +57,7 @@ def shell(prefix, current, title, desc, body, path=None):
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{prefix}assets/style.css">
 <script src="{prefix}assets/theme.js"></script>
+<script src="{prefix}miyee-switcher.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -65,6 +66,7 @@ def shell(prefix, current, title, desc, body, path=None):
     {brand(prefix)}
     <nav class="nav-tools" aria-label="Main">
       <ul class="nav-links" id="nav-links">{nav}</ul>
+      <miyee-app-switcher current-app="hub"></miyee-app-switcher>
       <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle theme">☀</button>
       <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">☰</button>
     </nav>
