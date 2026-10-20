@@ -25,7 +25,7 @@
     { id: "cfo", name: "Miyee CFO", sub: "CFO Analytics", tag: "Virtual CFO & Analytics", color: "#6366f1",
       prod: "https://cfo.miyeetechlabs.com/", dev: "https://miyeecfo.miyee-india.workers.dev/" },
     { id: "task", name: "Miyee Task", sub: "Tasks & Workflows", tag: "Compliance & Workflows", color: "#f59e0b",
-      prod: "https://task.miyeetechlabs.com/", dev: "https://vipinnairv.github.io/MiyeeTask/" },
+      prod: "https://task.miyeetechlabs.com/", dev: "https://miyeetask.miyee-india.workers.dev/" },
     { id: "pdf", name: "Miyee PDF Pro", sub: "Private PDFs", tag: "Private Client-Side PDF Suite", color: "#f43f5e",
       prod: "https://pdf.miyeetechlabs.com/", dev: "https://miyeepdfpro.miyee-india.workers.dev/" }
   ];
