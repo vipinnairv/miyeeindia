@@ -669,3 +669,64 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.025em; }
 html, body { overflow-x: hidden; }
 img, svg, video { max-width: 100%; height: auto; }
 .app-thumb { height: 56px; }
+
+/* ---------- Company About Us: leadership team (Oct 2026) ---------- */
+.team { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.member { text-align: center; align-items: center; }
+.member::before { left: 50%; right: auto; width: 64px; transform: translateX(-50%); }
+.avatar {
+  width: 112px; height: 112px; border-radius: 50%; margin: 6px auto 18px; overflow: hidden; flex: none;
+  display: grid; place-items: center; color: #fff;
+  font-family: var(--font-display); font-weight: 700; font-size: 2.1rem; letter-spacing: .02em;
+  background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 45%, var(--brand2)));
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
+.member h3 { font-size: 1.3rem; margin-bottom: 2px; }
+.member .title { color: var(--accent); font-weight: 700; font-size: .92rem; margin: 0 0 14px; flex: none; }
+.member p { text-align: left; font-size: .95rem; }
+.member .card-actions { justify-content: center; }
+@media (max-width: 900px) { .team { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; } }
+
+/* ---------- Pricing ---------- */
+.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+.plan { gap: 4px; }
+.plan .plan-name { font-weight: 700; font-size: 1.05rem; color: var(--text); }
+.plan .price { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--accent); line-height: 1.2; margin: 6px 0 0; }
+.plan .price small { font-size: .9rem; font-weight: 600; color: var(--muted); }
+.plan .per { color: var(--muted); font-size: .88rem; margin: 0 0 14px; flex: none; }
+.plan .feat { flex: 1; }
+.plan.featured { border-color: var(--accent); box-shadow: var(--shadow), 0 0 0 1px color-mix(in srgb, var(--accent) 40%, transparent); }
+.plan .ribbon {
+  position: absolute; top: 18px; right: 18px; padding: 3px 10px; border-radius: 999px;
+  font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--on-accent); background: var(--brand-solid);
+}
+.price-group { margin-bottom: 56px; }
+.price-group .section-head { text-align: left; margin-bottom: 20px; }
+.price-group .section-head h2 { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.price-group .section-head img { width: 40px; height: 40px; }
+.free-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.free-list a { display: flex; align-items: center; gap: 12px; padding: 14px 16px; text-decoration: none; color: var(--text); font-weight: 600;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.free-list a:hover { border-color: var(--brand); }
+.free-list img { width: 36px; height: 36px; }
+.free-list span { margin-left: auto; font-size: .72rem; font-weight: 800; letter-spacing: .08em; color: var(--brand); }
+.pill-paid { background: var(--brand2); }
+.plan .ribbon { top: 16px; right: 16px; }
+.plan .ribbon + .plan-name { padding-right: 84px; }
+.price-group .section-head { max-width: none; }
+.free-list { grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); }
+.free-list span { flex: none; padding-left: 8px; }
+/* Eight nav items: switch to the menu button below 1080px */
+@media (max-width: 1080px) {
+  .menu-btn { display: grid; }
+  .nav-links {
+    display: none; position: absolute; left: 0; right: 0; top: 68px;
+    flex-direction: column; align-items: stretch; gap: 2px;
+    padding: 10px 20px 16px; background: var(--bg-elev); border-bottom: 1px solid var(--border);
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 12px; }
+  .nav-links a[aria-current="page"] { box-shadow: inset 3px 0 0 var(--brand-solid); background: var(--bg-elev); }
+}
