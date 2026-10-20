@@ -21,8 +21,8 @@ def footer(prefix, pages):
   <div class="wrap footer-grid">
     <div class="footer-brand">
       {brand(prefix)}
-      <p>Free Apps / Tools to help the MSME business community grow.</p>
-      <p class="fineprint">A personal, non-commercial initiative by Vipin Nair. Views and content are personal and do not represent any employer.</p>
+      <p>Finance, tax and productivity software for Indian MSMEs, finance teams and investors.</p>
+      <p class="fineprint">Founded by Vipin Nair, Krishna V and Sankarshan. Built in India, privacy-first, and running in your browser.</p>
     </div>
     <nav class="footer-col" aria-label="Footer">
       <h2>Explore</h2>
@@ -39,11 +39,11 @@ def footer(prefix, pages):
     </div>
   </div>
   <div class="wrap footer-bottom">
-    <p>© 2026 Vipin Nair. All rights reserved.</p>
-    <p><a href="{prefix}privacy.html">Privacy</a> · Free to use · No ads</p>
+    <p>© 2026 MiyeeIndia Tech Labs. All rights reserved.</p>
+    <p><a href="{prefix}pricing.html">Pricing</a> · <a href="{prefix}privacy.html">Privacy</a> · <a href="{prefix}contact.html">Contact</a></p>
   </div>
   <div class="wrap footer-disclaimer">
-    <p><strong>Disclaimer:</strong> This is a portfolio site for non-commercial use, community help, learning, and growing.</p>
+    <p><strong>Disclaimer:</strong> Our Apps / Tools and guides support your work; they are not legal, tax or investment advice. Please confirm important decisions with a qualified professional.</p>
   </div>
 </footer>'''
 
@@ -77,13 +77,13 @@ def social(title, desc, path=None):
         '<meta property="og:image:type" content="image/jpeg">',
         '<meta property="og:image:width" content="1200">',
         '<meta property="og:image:height" content="630">',
-        '<meta property="og:image:alt" content="Vipin Nair, MiyeeIndia Tech Labs: free apps, tools and guides for the MSME community">',
+        '<meta property="og:image:alt" content="MiyeeIndia Tech Labs: finance, tax and productivity software for Indian MSMEs">',
         '<meta name="twitter:card" content="summary_large_image">',
         '<meta name="twitter:site" content="@vipinnairv">',
         '<meta name="twitter:creator" content="@vipinnairv">',
         f'<meta name="twitter:title" content="{t}">',
         f'<meta name="twitter:description" content="{d}">',
         f'<meta name="twitter:image" content="{OG_IMAGE}">',
-        '<meta name="author" content="Vipin Nair">',
+        '<meta name="author" content="MiyeeIndia Tech Labs">',
     ]
     return "\n".join(x for x in tags if x)
