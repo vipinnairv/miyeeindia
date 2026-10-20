@@ -35,7 +35,7 @@ from the page URL.
 | Attribute | Values | Default |
 | --- | --- | --- |
 | `current-app` | `hub`, `books`, `cfo`, `task`, `pdf` | detected from URL |
-| `theme` | `auto`, `light`, `dark` | `auto` (reads `html.dark`, `data-theme`, then the OS setting) |
+| `theme` | `auto`, `light`, `dark` | `auto` (reads `html.dark`, `data-theme`, `data-bs-theme` or `data-color-scheme`, then the OS setting) |
 | `variant` | `bar` adds a slim 40px top bar with the suite name | button only |
 | `align` | `left` opens the menu to the right of the button | opens to the left |
 | `cmd-k` | present = Ctrl/Cmd + K also toggles the menu | off |
