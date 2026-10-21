@@ -54,7 +54,7 @@ def icons(prefix):
             f'<link rel="apple-touch-icon" href="{prefix}assets/apple-touch-icon.png">')
 
 
-SITE_URL = "https://miyeetechlabs.miyee-india.workers.dev/"
+SITE_URL = "https://miyeetechlabs.com/"
 OG_IMAGE = SITE_URL + "assets/og-image.jpg"
 
 

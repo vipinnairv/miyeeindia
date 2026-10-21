@@ -1,10 +1,11 @@
-/*! Miyee Tech Labs app switcher v1.0.2 | <miyee-app-switcher> | zero dependencies | (c) 2026 Vipin Nair */
+/*! Miyee Tech Labs app switcher v1.0.3 | <miyee-app-switcher> | zero dependencies | (c) 2026 Vipin Nair */
 (() => {
   "use strict";
   if (!window.customElements || customElements.get("miyee-app-switcher")) return;
 
-  // Flip to true once miyeetechlabs.com and its subdomains are live.
-  // Pages served from *.miyeetechlabs.com switch to the custom URLs automatically either way.
+  // Apps marked live: true always link to their miyeetechlabs.com address. The rest stay on
+  // their current address until USE_CUSTOM_DOMAIN (or custom-domain="true") is set, because
+  // moving an app to a new origin hides data its users saved in the browser at the old one.
   const USE_CUSTOM_DOMAIN = false;
 
   const ICON = {
@@ -18,7 +19,7 @@
 
   const APPS = [
     { id: "hub", name: "Miyee Tech Labs", sub: "Suite Hub", tag: "Main Suite & Account Hub", color: "#ea580c",
-      prod: "https://miyeetechlabs.com/", dev: "https://miyeetechlabs.miyee-india.workers.dev/" },
+      prod: "https://miyeetechlabs.com/", dev: "https://miyeetechlabs.miyee-india.workers.dev/", live: true },
     { id: "books", name: "Miyee Books", sub: "Accounting & GST", tag: "Cloud Accounting & GST", color: "#10b981",
       prod: "https://books.miyeetechlabs.com/", dev: "https://miyeebooks.miyee-india.workers.dev/",
       alt: ["https://miyeebooks.pages.dev/"] },
@@ -115,10 +116,10 @@ a{color:inherit;text-decoration:none}
       const a = this.getAttribute("custom-domain");
       if (a === "true" || a === "false") return a === "true";
       if (typeof window.MIYEE_USE_CUSTOM_DOMAIN === "boolean") return window.MIYEE_USE_CUSTOM_DOMAIN;
-      return USE_CUSTOM_DOMAIN || /(^|\.)miyeetechlabs\.com$/i.test(location.hostname);
+      return USE_CUSTOM_DOMAIN;
     }
 
-    url(app) { return this.useCustom ? app.prod : app.dev; }
+    url(app) { return app.live || this.useCustom ? app.prod : app.dev; }
 
     get current() {
       const a = (this.getAttribute("current-app") || "").toLowerCase();
@@ -218,5 +219,5 @@ ${on ? '<span class="cur">Current</span>' : ""}<span class="nt" role="link" tabi
   }
 
   customElements.define("miyee-app-switcher", MiyeeAppSwitcher);
-  window.MiyeeAppSwitcher = { apps: APPS, version: "1.0.2" };
+  window.MiyeeAppSwitcher = { apps: APPS, version: "1.0.3" };
 })();

@@ -48,15 +48,20 @@ Events: `miyee-switcher-open` and `miyee-switcher-close` bubble from the element
 
 ## Switching to miyeetechlabs.com
 
-The domain is not live yet, so the component uses the current
-`workers.dev` / `pages.dev` / `github.io` addresses. When the domain and its
-subdomains (`books.`, `cfo.`, `task.`, `pdf.`) are set up:
+The hub is live at `https://miyeetechlabs.com/` (marked `live: true`), so every
+copy of the switcher links to it there. The apps keep their current
+`workers.dev` / `pages.dev` addresses until each one moves to its subdomain
+(`books.`, `cfo.`, `task.`, `pdf.`).
 
-1. In `miyee-switcher.js`, set `const USE_CUSTOM_DOMAIN = true;`
-2. Change the `<script src>` in each app to `https://miyeetechlabs.com/miyee-switcher.js`.
+Moving an app changes its browser origin, and data its users saved in the
+browser (localStorage, IndexedDB) at the old address does not follow. Before
+moving an app, give users a backup/restore path, then:
 
-Pages already served from `*.miyeetechlabs.com` switch to the custom URLs
-automatically, even before step 1.
+1. Attach the subdomain to the app's Worker (Settings > Domains & Routes).
+2. Add `live: true` to that app in `APPS` in `miyee-switcher.js`.
+3. Update OAuth origins, payment webhooks and CSP entries that name the old address.
+
+`USE_CUSTOM_DOMAIN = true` (or `custom-domain="true"`) switches every app at once.
 
 ## React
 
