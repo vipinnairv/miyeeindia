@@ -48,10 +48,10 @@ Events: `miyee-switcher-open` and `miyee-switcher-close` bubble from the element
 
 ## Switching to miyeetechlabs.com
 
-The hub is live at `https://miyeetechlabs.com/` (marked `live: true`), so every
-copy of the switcher links to it there. The apps keep their current
-`workers.dev` / `pages.dev` addresses until each one moves to its subdomain
-(`books.`, `cfo.`, `task.`, `pdf.`).
+Every app is live on its miyeetechlabs.com address (marked `live: true`):
+`miyeetechlabs.com`, `books.`, `cfo.`, `taskpro.` and `pdfpro.`. The old
+`workers.dev` addresses keep working and are still recognised for the
+current-app highlight.
 
 Moving an app changes its browser origin, and data its users saved in the
 browser (localStorage, IndexedDB) at the old address does not follow. Before

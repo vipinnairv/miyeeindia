@@ -1,4 +1,4 @@
-/*! Miyee Tech Labs app switcher v1.0.3 | <miyee-app-switcher> | zero dependencies | (c) 2026 Vipin Nair */
+/*! Miyee Tech Labs app switcher v1.0.4 | <miyee-app-switcher> | zero dependencies | (c) 2026 Vipin Nair */
 (() => {
   "use strict";
   if (!window.customElements || customElements.get("miyee-app-switcher")) return;
@@ -21,14 +21,14 @@
     { id: "hub", name: "Miyee Tech Labs", sub: "Suite Hub", tag: "Main Suite & Account Hub", color: "#ea580c",
       prod: "https://miyeetechlabs.com/", dev: "https://miyeetechlabs.miyee-india.workers.dev/", live: true },
     { id: "books", name: "Miyee Books", sub: "Accounting & GST", tag: "Cloud Accounting & GST", color: "#10b981",
-      prod: "https://books.miyeetechlabs.com/", dev: "https://miyeebooks.miyee-india.workers.dev/",
+      prod: "https://books.miyeetechlabs.com/", dev: "https://miyeebooks.miyee-india.workers.dev/", live: true,
       alt: ["https://miyeebooks.pages.dev/"] },
     { id: "cfo", name: "Miyee CFO", sub: "CFO Analytics", tag: "Virtual CFO & Analytics", color: "#6366f1",
-      prod: "https://cfo.miyeetechlabs.com/", dev: "https://miyeecfo.miyee-india.workers.dev/" },
+      prod: "https://cfo.miyeetechlabs.com/", dev: "https://miyeecfo.miyee-india.workers.dev/", live: true },
     { id: "task", name: "Miyee Task", sub: "Tasks & Workflows", tag: "Compliance & Workflows", color: "#f59e0b",
-      prod: "https://task.miyeetechlabs.com/", dev: "https://miyeetask.miyee-india.workers.dev/" },
+      prod: "https://taskpro.miyeetechlabs.com/", dev: "https://miyeetask.miyee-india.workers.dev/", live: true },
     { id: "pdf", name: "Miyee PDF Pro", sub: "Private PDFs", tag: "Private Client-Side PDF Suite", color: "#f43f5e",
-      prod: "https://pdf.miyeetechlabs.com/", dev: "https://miyeepdfpro.miyee-india.workers.dev/" }
+      prod: "https://pdfpro.miyeetechlabs.com/", dev: "https://miyeepdfpro.miyee-india.workers.dev/", live: true }
   ];
 
   const svg = (d, size = 20) =>
@@ -219,5 +219,5 @@ ${on ? '<span class="cur">Current</span>' : ""}<span class="nt" role="link" tabi
   }
 
   customElements.define("miyee-app-switcher", MiyeeAppSwitcher);
-  window.MiyeeAppSwitcher = { apps: APPS, version: "1.0.3" };
+  window.MiyeeAppSwitcher = { apps: APPS, version: "1.0.4" };
 })();
