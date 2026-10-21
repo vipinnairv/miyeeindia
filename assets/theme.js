@@ -1,4 +1,9 @@
 /* Theme + mobile menu. Loaded in <head> (no defer) so the theme applies before first paint. */
+// The old workers.dev address moves visitors to miyeetechlabs.com, same page.
+// miyee-switcher.js is still served there for the apps that load it.
+if (location.hostname === "miyeetechlabs.miyee-india.workers.dev") {
+  location.replace("https://miyeetechlabs.com" + location.pathname + location.search + location.hash);
+}
 (function () {
   var root = document.documentElement;
   try {
