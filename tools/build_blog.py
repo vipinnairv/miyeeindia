@@ -29,7 +29,7 @@ from site_chrome import brand, footer, icons, social  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 POSTS = ROOT / "blog" / "posts"
-SITE = "MiyeeIndia Tech Labs"
+SITE = "Miyee Tech Labs"
 PAGES = [("index.html", "About Us"), ("home.html", "Hub"), ("products.html", "Apps / Tools"),
          ("pricing.html", "Pricing"), ("library.html", "Library"), ("downloads.html", "Downloads"),
          ("blog.html", "Blog"), ("contact.html", "Contact Us")]
@@ -187,7 +187,7 @@ def main():
   <div class="wrap">
     <span class="badge">BLOG</span>
     <h1>News and <span style="color:var(--brand)">updates</span></h1>
-    <p>Updates on new tools and guides, practical notes on tax and compliance, and tips for getting the most from MiyeeIndia Tech Labs.</p>
+    <p>Updates on new tools and guides, practical notes on tax and compliance, and tips for getting the most from Miyee Tech Labs.</p>
   </div>
 </section>
 <section class="section">
@@ -196,7 +196,7 @@ def main():
   </div>
 </section>'''
     (ROOT / "blog.html").write_text(
-        shell("", "blog.html", f"Blog | {SITE}", "News, updates and notes from MiyeeIndia Tech Labs.", index, "blog.html"), encoding="utf-8")
+        shell("", "blog.html", f"Blog | {SITE}", "News, updates and notes from Miyee Tech Labs.", index, "blog.html"), encoding="utf-8")
     print(f"Built {len(posts)} post(s) and blog.html")
 
 

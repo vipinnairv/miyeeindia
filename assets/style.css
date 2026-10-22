@@ -732,3 +732,13 @@ img, svg, video { max-width: 100%; height: auto; }
 }
 /* A single leader: one wider card, centred */
 .team.solo { grid-template-columns: minmax(0, 640px); justify-content: center; }
+
+/* ---------- MTL brand mark (Oct 2026) ---------- */
+.brand .brand-mark { display: block; height: 32px; width: auto; flex: none; }
+.site-footer .brand .brand-mark { height: 30px; }
+.hero-logo { display: block; width: min(360px, 80%); height: auto; margin: 0 auto 22px; }
+.brand .brand-text span {
+  background: linear-gradient(90deg, #e11d8f, #f97316); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.site-footer .brand .brand-text span { background: linear-gradient(90deg, #22d3ee, #4ade80); -webkit-background-clip: text; background-clip: text; color: transparent; }
+@media (max-width: 380px) { .brand .brand-mark { height: 26px; } }
