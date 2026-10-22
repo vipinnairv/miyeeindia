@@ -45,7 +45,7 @@ def footer(prefix, pages):
     <p><a href="{prefix}pricing.html">Pricing</a> · <a href="{prefix}privacy.html">Privacy</a> · <a href="{prefix}contact.html">Contact</a></p>
   </div>
   <div class="wrap footer-disclaimer">
-    <p><strong>Disclaimer:</strong> Our Apps / Tools and guides support your work; they are not legal, tax or investment advice. Please confirm important decisions with a qualified professional.</p>
+    <p><strong>Disclaimer:</strong> Our Apps / Tools and guides are for information and to make your work easier. They do not replace professional advice from a Chartered Accountant, lawyer or financial adviser, so please consult one before important decisions.</p>
   </div>
 </footer>'''
 
