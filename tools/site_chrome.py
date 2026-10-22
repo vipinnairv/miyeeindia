@@ -12,8 +12,8 @@ MAIL_SVG = ('<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke=
 
 
 def brand(prefix):
-    return (f'<a class="brand" href="{prefix}index.html"><span class="logo-mark" aria-hidden="true">M</span>'
-            f'<span class="brand-text">Miyee<span>India</span> Tech Labs</span></a>')
+    return (f'<a class="brand" href="{prefix}index.html"><img class="brand-mark" src="{prefix}assets/img/brand/mtl-mark.png" alt="" width="42" height="26">'
+            f'<span class="brand-text">Miyee <span>Tech Labs</span></span></a>')
 
 
 def footer(prefix, pages):
@@ -41,7 +41,7 @@ def footer(prefix, pages):
     </div>
   </div>
   <div class="wrap footer-bottom">
-    <p>© 2026 MiyeeIndia Tech Labs. All rights reserved.</p>
+    <p>© 2026 Miyee Tech Labs. All rights reserved.</p>
     <p><a href="{prefix}pricing.html">Pricing</a> · <a href="{prefix}privacy.html">Privacy</a> · <a href="{prefix}contact.html">Contact</a></p>
   </div>
   <div class="wrap footer-disclaimer">
@@ -51,8 +51,7 @@ def footer(prefix, pages):
 
 
 def icons(prefix):
-    return (f'<link rel="icon" href="{prefix}assets/favicon.svg" type="image/svg+xml">\n'
-            f'<link rel="icon" href="{prefix}assets/favicon-32.png" sizes="32x32" type="image/png">\n'
+    return (f'<link rel="icon" href="{prefix}assets/favicon-32.png" sizes="32x32" type="image/png">\n'
             f'<link rel="apple-touch-icon" href="{prefix}assets/apple-touch-icon.png">')
 
 
@@ -70,7 +69,7 @@ def social(title, desc, path=None):
     tags = [
         f'<link rel="canonical" href="{url}">' if path is not None else "",
         '<meta property="og:type" content="website">',
-        '<meta property="og:site_name" content="MiyeeIndia Tech Labs">',
+        '<meta property="og:site_name" content="Miyee Tech Labs">',
         '<meta property="og:locale" content="en_IN">',
         f'<meta property="og:title" content="{t}">',
         f'<meta property="og:description" content="{d}">',
@@ -79,13 +78,13 @@ def social(title, desc, path=None):
         '<meta property="og:image:type" content="image/jpeg">',
         '<meta property="og:image:width" content="1200">',
         '<meta property="og:image:height" content="630">',
-        '<meta property="og:image:alt" content="MiyeeIndia Tech Labs: finance, tax and productivity software for Indian MSMEs">',
+        '<meta property="og:image:alt" content="Miyee Tech Labs: finance, tax and productivity software for Indian MSMEs">',
         '<meta name="twitter:card" content="summary_large_image">',
         '<meta name="twitter:site" content="@vipinnairv">',
         '<meta name="twitter:creator" content="@vipinnairv">',
         f'<meta name="twitter:title" content="{t}">',
         f'<meta name="twitter:description" content="{d}">',
         f'<meta name="twitter:image" content="{OG_IMAGE}">',
-        '<meta name="author" content="MiyeeIndia Tech Labs">',
+        '<meta name="author" content="Miyee Tech Labs">',
     ]
     return "\n".join(x for x in tags if x)

@@ -1,11 +1,11 @@
 ---
-title: Welcome to the MiyeeIndia Tech Labs blog
+title: Welcome to the Miyee Tech Labs blog
 date: 2026-10-04
 tags: Announcement
-summary: What this blog is for, and what you can find on MiyeeIndia Tech Labs today.
+summary: What this blog is for, and what you can find on Miyee Tech Labs today.
 ---
 
-This is the home for news and updates from MiyeeIndia Tech Labs, an Indian software company building finance, tax and productivity tools, and learning resources, for the MSME business community.
+This is the home for news and updates from Miyee Tech Labs, an Indian software company building finance, tax and productivity tools, and learning resources, for the MSME business community.
 
 ## What you will find here
 

@@ -136,7 +136,7 @@ def main():
   </article>
 </div>
 <script src="../../assets/reader.js"></script>'''
-        return shell("../../", "library.html", f"{ptitle} | {a.title} | MiyeeIndia Tech Labs", desc, body, path)
+        return shell("../../", "library.html", f"{ptitle} | {a.title} | Miyee Tech Labs", desc, body, path)
 
     # cover / index
     cover = tidy(fix_links(front, "index.html"))
