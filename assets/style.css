@@ -730,3 +730,5 @@ img, svg, video { max-width: 100%; height: auto; }
   .nav-links a { padding: 12px; }
   .nav-links a[aria-current="page"] { box-shadow: inset 3px 0 0 var(--brand-solid); background: var(--bg-elev); }
 }
+/* A single leader: one wider card, centred */
+.team.solo { grid-template-columns: minmax(0, 640px); justify-content: center; }
