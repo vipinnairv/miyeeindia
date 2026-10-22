@@ -17,6 +17,6 @@ The new [Library](../library.html) brings together five reference guides, free t
 
 ## Read online only
 
-The guides are provided for reading on this site and are not available to download. They are for general reference and are not legal, tax or investment advice. Rates, thresholds and due dates change through notifications, so check official sources before acting.
+The guides are provided for reading on this site and are not available to download. They are for general reference and do not replace advice from a Chartered Accountant, lawyer or financial adviser. Rates, thresholds and due dates change through notifications, so check official sources before acting.
 
 [Open the Library](../library.html)
