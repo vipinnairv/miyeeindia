@@ -117,7 +117,7 @@ def main():
 
     title = html.escape(a.title)
     fine = ('<p class="fineprint">© Vipin Nair. This guide is for reading online only. Copying, downloading, '
-            'printing and redistribution are not permitted. For study and general reference; not legal, tax or investment advice.</p>')
+            'printing and redistribution are not permitted. For study and general reference; it does not replace advice from a Chartered Accountant, lawyer or financial adviser.</p>')
     crumbs = f'<p class="crumbs"><a href="../../library.html">Library</a> / <a href="index.html">{title}</a></p>'
 
     def page(current, inner, ptitle, desc):
