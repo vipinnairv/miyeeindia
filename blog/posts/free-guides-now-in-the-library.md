@@ -13,7 +13,7 @@ The new [Library](../library.html) brings together five reference guides, free t
 - **Income-tax Act, 2025: The Professional's Master Guide.** Covers Tax Year 2026-27, with the new section beside the old one.
 - **Technical Accounting Manual: IFRS, IAS and Ind AS Equivalents.** Standard-by-standard analysis with carve-outs.
 - **Comprehensive Guide to Indian Accounting Standards (Ind AS).** A deep dive for beginners and professionals.
-- **MiyeeStockBuddy: The Complete Guide to Indian Markets.** From the first share to futures and options, as education only.
+- **MiyeeStock Buddy: The Complete Guide to Indian Markets.** From the first share to futures and options, as education only.
 
 ## Read online only
 
