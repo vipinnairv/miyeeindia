@@ -22,7 +22,7 @@ def footer(prefix, pages):
   <div class="wrap footer-grid">
     <div class="footer-brand">
       {brand(prefix)}
-      <p>Finance, tax and productivity software for Indian MSMEs, finance teams and investors.</p>
+      <p>Intelligent finance, tax and productivity software for Indian MSMEs, finance professionals and investors.</p>
       <p class="fineprint">Founded by Vipin Nair. Built in India, privacy-first, and running in your browser.</p>
     </div>
     <nav class="footer-col" aria-label="Footer">
