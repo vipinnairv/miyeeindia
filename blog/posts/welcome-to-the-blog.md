@@ -15,7 +15,7 @@ This is the home for news and updates from Miyee Tech Labs, an Indian software c
 
 ## What is on the site today
 
-- **Apps / Tools:** MiyeeBooks, MyeeStockBuddy, MiyeeCFO and MiyeePDFPro. See the [Apps / Tools page](../products.html).
+- **Apps / Tools:** MiyeeBooks, MiyeeStock Buddy, MiyeeCFO and MiyeePDFPro. See the [Apps / Tools page](../products.html).
 - **Library:** free reference guides on GST, income tax, Ind AS and markets, to read online. See the [Library](../library.html).
 - **Downloads:** the free GST Return Downloader extension. See [Downloads](../downloads.html).
 
