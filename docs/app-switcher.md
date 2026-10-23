@@ -48,7 +48,7 @@ Events: `miyee-switcher-open` and `miyee-switcher-close` bubble from the element
 
 ## Switching to miyeetechlabs.com
 
-Every app is live on its miyeetechlabs.com address (marked `live: true`):
+The switcher lists all nine apps (v1.1.0): Books, CFO, PDF Pro, Task and MiyeeStock Buddy on their miyeetechlabs.com subdomains, and MiyeeFundManager, TaxSmartIndiaPro, MiyeeFinModel and MiyeeLearn on vipinnairv.github.io. Every app is live on its address (marked `live: true`):
 `miyeetechlabs.com`, `books.`, `cfo.`, `taskpro.` and `pdfpro.`. The old
 `workers.dev` addresses keep working and are still recognised for the
 current-app highlight.

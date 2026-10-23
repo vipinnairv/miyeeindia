@@ -33,7 +33,6 @@ def footer(prefix, pages):
       <h2>Connect</h2>
       <ul>
         <li><a href="mailto:{SUPPORT}">{MAIL_SVG} {SUPPORT}</a></li>
-        <li><a href="mailto:{EMAIL}">{MAIL_SVG} {EMAIL}</a></li>
         <li><a href="{LINKEDIN}" target="_blank" rel="noopener noreferrer">{LI_SVG} LinkedIn</a></li>
         <li><a href="{X_URL}" target="_blank" rel="noopener noreferrer">{X_SVG} X (Twitter)</a></li>
         <li><a href="{prefix}contact.html">Contact page</a></li>
