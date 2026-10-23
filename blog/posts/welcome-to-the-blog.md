@@ -19,4 +19,4 @@ This is the home for news and updates from Miyee Tech Labs, an Indian software c
 - **Library:** free reference guides on GST, income tax, Ind AS and markets, to read online. See the [Library](../library.html).
 - **Downloads:** the free GST Return Downloader extension. See [Downloads](../downloads.html).
 
-Questions or suggestions are welcome at miyee.india@gmail.com.
+Questions or suggestions are welcome at support@miyeetechlabs.com.

@@ -1,4 +1,4 @@
-/*! Miyee Tech Labs app switcher v1.0.5 | <miyee-app-switcher> | zero dependencies | (c) 2026 Vipin Nair */
+/*! Miyee Tech Labs app switcher v1.1.0 | <miyee-app-switcher> | zero dependencies | (c) 2026 Vipin Nair */
 (() => {
   "use strict";
   if (!window.customElements || customElements.get("miyee-app-switcher")) return;
@@ -17,9 +17,15 @@
     cfo: '<path d="M3 3v18h18"/><path d="m7 15 3.5-4 3 2.5L19 7"/><path d="M15 7h4v4"/>',
     task: '<rect x="4" y="3" width="16" height="18" rx="2"/><path d="m8 9 1.5 1.5L12 8M8 15l1.5 1.5L12 14M14.5 9.5H17M14.5 15.5H17"/>',
     pdf: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8.5 13h7M8.5 17h4.5"/>',
+    stock: '<path d="M3 17l5-5 4 4 8-8"/><path d="M15 8h5v5"/><path d="M3 21h18"/>',
+    fund: '<path d="M3 21h18"/><path d="M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/>',
+    tax: '<rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8"/><path d="m9 17 6-6"/><circle cx="9.5" cy="11.5" r="1"/><circle cx="14.5" cy="16.5" r="1"/>',
+    model: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+    learn: '<path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/>',
     ext: '<path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>'
   };
 
+  const GH = "https://vipinnairv.github.io/";
   const APPS = [
     { id: "hub", name: "Miyee Tech Labs", sub: "Suite Hub", tag: "Main Suite & Account Hub", color: "#ea580c",
       prod: "https://miyeetechlabs.com/", dev: "https://miyeetechlabs.miyee-india.workers.dev/", live: true },
@@ -28,10 +34,20 @@
       alt: ["https://miyeebooks.pages.dev/"] },
     { id: "cfo", name: "Miyee CFO", sub: "CFO Analytics", tag: "Virtual CFO & Analytics", color: "#6366f1",
       prod: "https://cfo.miyeetechlabs.com/", dev: "https://miyeecfo.miyee-india.workers.dev/", live: true },
+    { id: "pdf", name: "Miyee PDF Pro", sub: "Private PDFs", tag: "Private Client-Side PDF Suite", color: "#f43f5e",
+      prod: "https://pdfpro.miyeetechlabs.com/", dev: "https://miyeepdfpro.miyee-india.workers.dev/", live: true },
     { id: "task", name: "Miyee Task", sub: "Tasks & Workflows", tag: "Compliance & Workflows", color: "#f59e0b",
       prod: "https://taskpro.miyeetechlabs.com/", dev: "https://miyeetask.miyee-india.workers.dev/", live: true },
-    { id: "pdf", name: "Miyee PDF Pro", sub: "Private PDFs", tag: "Private Client-Side PDF Suite", color: "#f43f5e",
-      prod: "https://pdfpro.miyeetechlabs.com/", dev: "https://miyeepdfpro.miyee-india.workers.dev/", live: true }
+    { id: "stock", name: "MiyeeStock Buddy", sub: "Stock Analysis", tag: "Stock Analysis & Portfolio Manager", color: "#d97706",
+      prod: "https://stockbuddy.miyeetechlabs.com/", dev: "https://myeestockbuddy.miyee-india.workers.dev/", live: true },
+    { id: "fund", name: "MiyeeFundManager", sub: "SEBI Funds", tag: "AIF, Mutual Fund & PMS Workbench", color: "#4338ca",
+      prod: GH + "miyeefundmanager/", dev: GH + "miyeefundmanager/", live: true },
+    { id: "tax", name: "TaxSmartIndiaPro", sub: "Income Tax", tag: "Income Tax Calculator FY 2026-27", color: "#ea580c",
+      prod: GH + "TaxSmartIndiaPro/", dev: GH + "TaxSmartIndiaPro/", live: true },
+    { id: "model", name: "MiyeeFinModel", sub: "Valuation", tag: "Financial Modelling & Valuation", color: "#7c3aed",
+      prod: GH + "MyeeFinModel/", dev: GH + "MyeeFinModel/", live: true },
+    { id: "learn", name: "MiyeeLearn", sub: "Upskilling", tag: "Learn, Assess & Certify", color: "#0d9488",
+      prod: GH + "Miyeelearn/", dev: GH + "Miyeelearn/", live: true }
   ];
 
   const svg = (d, size = 20) =>
@@ -58,7 +74,7 @@ a{color:inherit;text-decoration:none}
 .tip{position:absolute;top:calc(100% + 6px);right:0;white-space:nowrap;background:#0f172a;color:#fff;font-size:11px;font-weight:600;padding:4px 8px;border-radius:6px;opacity:0;pointer-events:none;transform:translateY(-2px);transition:opacity .15s,transform .15s}
 .trigger:hover+.tip{opacity:1;transform:none}
 :host([open]) .tip{display:none}
-.pop{position:absolute;top:calc(100% + 10px);right:0;width:320px;z-index:2147483000;padding:14px;border-radius:18px;border:1px solid var(--bd);background:var(--bg);color:var(--fg);box-shadow:var(--sh);
+.pop{position:absolute;top:calc(100% + 10px);right:0;width:384px;max-width:calc(100vw - 20px);z-index:2147483000;padding:14px;border-radius:18px;border:1px solid var(--bd);background:var(--bg);color:var(--fg);box-shadow:var(--sh);
  -webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);transform-origin:top right;opacity:0;visibility:hidden;transform:scale(.96) translateY(-4px);transition:opacity .16s ease,transform .16s ease,visibility 0s .16s}
 :host([align=left]) .pop{right:auto;left:0;transform-origin:top left}
 :host([align=left]) .tip{right:auto;left:0}
@@ -67,10 +83,10 @@ a{color:inherit;text-decoration:none}
 .head b{font-size:10.5px;letter-spacing:.14em;color:var(--mut);font-weight:800}
 .hub{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--ring);padding:4px 8px;border-radius:8px}
 .hub:hover{background:var(--hov)}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.app{position:relative;display:flex;flex-direction:column;gap:8px;padding:12px;border-radius:14px;border:1px solid var(--bd);background:var(--solid);transition:transform .15s,border-color .15s,box-shadow .15s}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-height:min(62vh,452px);overflow-y:auto;overscroll-behavior:contain;padding:2px}
+.app{position:relative;display:flex;flex-direction:column;gap:6px;padding:10px 11px;border-radius:14px;border:1px solid var(--bd);background:var(--solid);transition:transform .15s,border-color .15s,box-shadow .15s}
 .app:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--c) 45%,var(--bd));box-shadow:0 8px 20px -10px color-mix(in srgb,var(--c) 60%,transparent)}
-.ico{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 85%,#fff),var(--c))}
+.ico{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 85%,#fff),var(--c))}
 .t{font-size:13px;font-weight:700;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .s{font-size:11.5px;color:var(--mut);margin-top:-6px;padding-right:24px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .cur{position:absolute;top:10px;right:10px;font-size:9.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:999px;color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent)}
@@ -223,5 +239,5 @@ ${on ? '<span class="cur">Current</span>' : ""}<span class="nt" role="link" tabi
   }
 
   customElements.define("miyee-app-switcher", MiyeeAppSwitcher);
-  window.MiyeeAppSwitcher = { apps: APPS, version: "1.0.5" };
+  window.MiyeeAppSwitcher = { apps: APPS, version: "1.1.0" };
 })();

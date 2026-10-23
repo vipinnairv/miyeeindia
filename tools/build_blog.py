@@ -30,9 +30,9 @@ from site_chrome import brand, footer, icons, social  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 POSTS = ROOT / "blog" / "posts"
 SITE = "Miyee Tech Labs"
-PAGES = [("index.html", "About Us"), ("home.html", "Hub"), ("products.html", "Apps / Tools"),
-         ("pricing.html", "Pricing"), ("library.html", "Library"), ("downloads.html", "Downloads"),
-         ("blog.html", "Blog"), ("contact.html", "Contact Us")]
+PAGES = [("index.html", "Home"), ("products.html", "Apps / Tools"), ("pricing.html", "Pricing"),
+         ("library.html", "Library"), ("downloads.html", "Downloads"), ("blog.html", "Blog"),
+         ("home.html", "About Us"), ("contact.html", "Contact Us")]
 ACCENTS = ["c-orange", "c-teal", "c-violet", "c-pink", "c-amber"]
 
 
