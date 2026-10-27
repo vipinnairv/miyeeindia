@@ -1,5 +1,5 @@
 /* =====================================================================
-   Miyee Tech Labs | shared stylesheet
+   Shared stylesheet
    Light-first. Dark mode follows the system (prefers-color-scheme) unless
    the visitor picks a theme with the toggle (html[data-theme]).
    Zero dependencies: custom properties, grid and flexbox only.
