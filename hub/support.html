@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support Our Community | Compliance Community Hub</title>
+<meta name="description" content="Voluntary support to keep compliance education and micro-business tools free. Contributions are not tax deductible.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="support" data-root="">
+<main id="main">
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Support Our Community</span>
+    <h1>Help keep compliance education free for everyone</h1>
+    <p class="lead">Every guide, checklist and study module on this hub is free to read. Voluntary support helps us keep it that way, and extend it to students and micro-businesses who need it most.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Where support goes</span><h2>Impact breakdown</h2></div>
+    <div class="grid grid-3">
+      <div class="card"><h3>Free student study material</h3><p>Section-wise memory tables, case summaries, comparative charts and practical walkthroughs for commerce, management, law and professional course students, updated whenever the law changes.</p><ul class="muted" style="padding-left:1.1em"><li>Printable revision packs</li><li>Updates when Finance Acts and notifications change the law</li><li>Practice questions with worked answers</li></ul></div>
+      <div class="card"><h3>Micro-business compliance workshops</h3><p>Plain-language sessions for small traders, artisans and first-time entrepreneurs on Udyam registration, GST basics, bookkeeping and delayed payment protection.</p><ul class="muted" style="padding-left:1.1em"><li>Venue and material costs for local sessions</li><li>Hands-on help with portal registrations</li><li>Regional-language handouts</li></ul></div>
+      <div class="card"><h3>Public awareness drives</h3><p>Myth-busting campaigns on income tax, GST invoices, cash limits and workplace rights, so citizens avoid avoidable penalties and recognise fraudulent notices.</p><ul class="muted" style="padding-left:1.1em"><li>Explainer graphics and short videos</li><li>Due-date reminders before key deadlines</li><li>Hosting and maintenance of this free hub</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap grid grid-2" style="align-items:start">
+    <div class="card">
+      <h2 style="font-size:1.4rem">Choose a contribution</h2>
+      <p class="muted">Pick a preset amount or enter your own.</p>
+      <div class="tiers" id="tiers" role="group" aria-label="Contribution amount">
+        <button class="tier" type="button" data-amt="101" aria-pressed="false"><strong>Rs. 101</strong><span>Prints a revision pack for a student</span></button>
+        <button class="tier" type="button" data-amt="501" aria-pressed="true"><strong>Rs. 501</strong><span>Supports one workshop participant</span></button>
+        <button class="tier" type="button" data-amt="1001" aria-pressed="false"><strong>Rs. 1,001</strong><span>Funds an awareness explainer</span></button>
+        <button class="tier" type="button" data-amt="2501" aria-pressed="false"><strong>Rs. 2,501</strong><span>Contributes to a local workshop</span></button>
+        <button class="tier" type="button" data-amt="5001" aria-pressed="false"><strong>Rs. 5,001</strong><span>Supports a month of content updates</span></button>
+      </div>
+      <p style="margin:16px 0 6px;font-weight:600"><label for="custom">Or enter a custom amount</label></p>
+      <div class="amount-input"><span aria-hidden="true">Rs.</span><input id="custom" type="number" inputmode="numeric" min="1" step="1" placeholder="Amount"></div>
+      <p class="muted" style="font-size:.85rem">The descriptions above are indicative uses of contributions, not a promise of a specific output per payment.</p>
+    </div>
+
+    <div class="card">
+      <h2 style="font-size:1.4rem">Complete your contribution</h2>
+      <p>Selected amount: <strong id="selected">Rs. 501</strong></p>
+      <div class="callout legal" role="note">
+        <strong>Important Disclosure:</strong> Contributions made toward our Community Awareness and Education initiatives are voluntary support payments. We do not hold Section 80G registration, and donations made on this page do NOT qualify for any Income Tax deduction or tax benefit under the Income Tax Act.
+      </div>
+      <label style="display:flex;gap:10px;align-items:flex-start;margin:12px 0"><input type="checkbox" id="ack" style="margin-top:5px;accent-color:var(--brand)"><span>I have read the disclosure and understand that this contribution is voluntary and not eligible for any tax deduction.</span></label>
+      <div class="pay-box">
+        <p style="margin-top:0"><strong>Pay by UPI</strong></p>
+        <p class="muted" style="margin:0 0 10px">UPI ID and QR code: <em>coming soon</em></p>
+        <p style="margin-top:0"><strong>Card, net banking or wallet</strong></p>
+        <p class="muted" style="margin:0 0 14px">Payment gateway: <em>coming soon</em></p>
+        <button class="btn btn-primary" type="button" id="pay" disabled>Contribute (payments not yet open)</button>
+        <p class="muted" style="font-size:.85rem;margin:10px 0 0">Online payments are not active yet. No money can be collected through this page until payment details are published here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head"><span class="eyebrow">Transparency</span><h2>Our commitments</h2></div>
+    <div class="grid grid-3">
+      <div class="card"><h3>Utilisation reporting</h3><p>We will publish a periodic summary of contributions received and how they were used across the three areas above, once payments open.</p></div>
+      <div class="card"><h3>No paid content</h3><p>Contributions do not buy access, advice or preferential treatment. All guides remain free for everyone.</p></div>
+      <div class="card"><h3>No tax claims</h3><p>We will not issue receipts implying any tax deduction. Contributions are voluntary support payments only.</p></div>
+    </div>
+    <h2 style="margin-top:32px;font-size:1.4rem">Frequently asked questions</h2>
+    <details class="faq"><summary>Can I claim a deduction under Section 80G for my contribution?</summary><div>No. We do not hold Section 80G registration, so contributions on this page do not qualify for any income tax deduction or tax benefit.</div></details>
+    <details class="faq"><summary>Will I get a receipt?</summary><div>Once payments open, you will receive an acknowledgement of your contribution. It will state clearly that the payment is a voluntary contribution and is not eligible for any tax deduction.</div></details>
+    <details class="faq"><summary>Is contributing required to use the hub?</summary><div>No. Every article, checklist and study module is free, with or without a contribution.</div></details>
+  </div>
+</section>
+</main>
+<script src="assets/js/site.js"></script>
+<script>
+(function () {
+  var amount = 501;
+  var sel = document.getElementById("selected"), custom = document.getElementById("custom");
+  function show() { sel.textContent = "Rs. " + Number(amount || 0).toLocaleString("en-IN"); }
+  document.querySelectorAll(".tier").forEach(function (b) {
+    b.addEventListener("click", function () {
+      document.querySelectorAll(".tier").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      amount = +b.getAttribute("data-amt"); custom.value = ""; show();
+    });
+  });
+  custom.addEventListener("input", function () {
+    var v = Math.max(0, Math.floor(+custom.value || 0));
+    if (v) { document.querySelectorAll(".tier").forEach(function (x) { x.setAttribute("aria-pressed", "false"); }); amount = v; show(); }
+  });
+})();
+</script>
+</body>
+</html>
