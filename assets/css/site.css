@@ -204,3 +204,17 @@ select { font: inherit; padding: 8px 10px; border-radius: 8px; border: 1px solid
 .mod-card .mod-img { max-width: none; object-fit: contain; }
 button.btn, .tier, .tab { font-family: var(--font-body); }
 .tier { display: flex; flex-direction: column; justify-content: flex-start; gap: 2px; }
+
+/* Mission and disclaimer */
+.checklist-plain { list-style: none; padding: 0; margin: 0; }
+.checklist-plain li { position: relative; padding: 12px 0 12px 30px; border-bottom: 1px solid var(--border); color: var(--muted); }
+.checklist-plain li:last-child { border-bottom: 0; }
+.checklist-plain li::before { content: "\2713"; position: absolute; left: 0; top: 12px; color: var(--brand); font-weight: 800; }
+.checklist-plain strong { color: var(--text); }
+.prose h2 { font-size: 1.35rem; margin-top: 1.8em; }
+.prose h3 { font-size: 1.1rem; margin-top: 1.5em; }
+.mission-panel { display: grid; grid-template-columns: 300px 1fr; gap: 32px; align-items: center; }
+.mission-panel img { width: 100%; height: auto; }
+.mission-panel h2 { font-size: clamp(1.3rem, 2.6vw, 1.7rem); }
+.mission-panel p { color: var(--muted); }
+@media (max-width: 760px) { .mission-panel { grid-template-columns: 1fr; text-align: center; } .mission-panel img { max-width: 220px; margin: 0 auto; } }
