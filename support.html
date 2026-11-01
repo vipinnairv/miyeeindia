@@ -6,21 +6,28 @@
 <title>Support Our Community | Compliance Community Hub</title>
 <meta name="description" content="Voluntary support to keep compliance education and micro-business tools free. Contributions are not tax deductible.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/theme.js"></script>
 </head>
-<body data-page="support" data-root="">
+<body data-page="support">
 <main id="main">
-<section class="hero">
+<header class="page-head split">
   <div class="wrap">
-    <span class="eyebrow">Support Our Community</span>
-    <h1>Help keep compliance education free for everyone</h1>
-    <p class="lead">Every guide, checklist and study module on this hub is free to read. Voluntary support helps us keep it that way, and extend it to students and micro-businesses who need it most.</p>
+    <div>
+      <span class="eyebrow">Support Our Community</span>
+      <h1>Help keep compliance education free for everyone</h1>
+      <p>Every guide, checklist and study module on this site is free to read. Voluntary support helps keep it that way and extends it to the students and micro-businesses who need it most.</p>
+      <div class="head-cta"><a class="btn btn-primary" href="#contribute">Contribute</a><a class="btn btn-ghost" href="#impact">Where support goes</a></div>
+    </div>
+    <figure><img src="assets/img/illustrations/support.svg" alt="Hands supporting a heart and a book" width="480" height="360"></figure>
   </div>
-</section>
+</header>
 
-<section class="section">
+<section class="section" id="impact">
   <div class="wrap">
     <div class="section-head"><span class="eyebrow">Where support goes</span><h2>Impact breakdown</h2></div>
     <div class="grid grid-3">
@@ -31,10 +38,10 @@
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
+<section class="section alt" id="contribute">
   <div class="wrap grid grid-2" style="align-items:start">
-    <div class="card">
-      <h2 style="font-size:1.4rem">Choose a contribution</h2>
+    <div class="card flat">
+      <h2 style="font-size:1.35rem">Choose a contribution</h2>
       <p class="muted">Pick a preset amount or enter your own.</p>
       <div class="tiers" id="tiers" role="group" aria-label="Contribution amount">
         <button class="tier" type="button" data-amt="101" aria-pressed="false"><strong>Rs. 101</strong><span>Prints a revision pack for a student</span></button>
@@ -48,13 +55,13 @@
       <p class="muted" style="font-size:.85rem">The descriptions above are indicative uses of contributions, not a promise of a specific output per payment.</p>
     </div>
 
-    <div class="card">
-      <h2 style="font-size:1.4rem">Complete your contribution</h2>
+    <div class="card flat">
+      <h2 style="font-size:1.35rem">Complete your contribution</h2>
       <p>Selected amount: <strong id="selected">Rs. 501</strong></p>
       <div class="callout legal" role="note">
         <strong>Important Disclosure:</strong> Contributions made toward our Community Awareness and Education initiatives are voluntary support payments. We do not hold Section 80G registration, and donations made on this page do NOT qualify for any Income Tax deduction or tax benefit under the Income Tax Act.
       </div>
-      <label style="display:flex;gap:10px;align-items:flex-start;margin:12px 0"><input type="checkbox" id="ack" style="margin-top:5px;accent-color:var(--brand)"><span>I have read the disclosure and understand that this contribution is voluntary and not eligible for any tax deduction.</span></label>
+      <label class="check-ack"><input type="checkbox" id="ack"><span>I have read the disclosure and understand that this contribution is voluntary and not eligible for any tax deduction.</span></label>
       <div class="pay-box">
         <p style="margin-top:0"><strong>Pay by UPI</strong></p>
         <p class="muted" style="margin:0 0 10px">UPI ID and QR code: <em>coming soon</em></p>

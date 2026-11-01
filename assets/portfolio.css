@@ -1,20 +1,4 @@
-/* Portfolio additions on top of the shared stylesheet (style.css). */
-html { scroll-padding-top: 76px; }
-.section.alt { background: var(--bg-elev); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.nav-links { gap: 2px; }
-@media (min-width: 761px) and (max-width: 1080px) {
-  /* Six links fit inline down to tablet width */
-  .menu-btn { display: none; }
-  .nav-links { display: flex; position: static; flex-direction: row; padding: 0; background: none; border: 0; }
-  .nav-links a { padding: 8px; }
-}
-@media (max-width: 760px) {
-  .menu-btn { display: grid; }
-  .nav-links { display: none; position: absolute; left: 0; right: 0; top: 68px; flex-direction: column; align-items: stretch; padding: 10px 20px 16px; background: var(--bg-elev); border-bottom: 1px solid var(--border); }
-  .nav-links.open { display: flex; }
-}
-
-/* Hero portrait */
+/* Portfolio page (index.html) styles, on top of style.css and css/site.css. */
 /* Hero: text beside the full, uncropped photo */
 .hero { padding-bottom: 0; }
 .hero-split { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 40px; align-items: end; text-align: left; }
@@ -110,4 +94,3 @@ html { scroll-padding-top: 76px; }
   .app-grid, .values { gap: 8pt; }
 }
 
-@media (max-width: 860px) and (min-width: 761px) { .nav-links a { padding: 8px 6px; font-size: .85rem; } }

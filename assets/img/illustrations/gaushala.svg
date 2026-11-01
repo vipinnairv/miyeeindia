@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" role="img"><title>A cow resting near a Gaushala shed</title>
+<circle cx="240" cy="180" r="160" fill="#fef3c7"/>
+<circle cx="370" cy="84" r="34" fill="#fbbf24"/>
+<path d="M40 300h400v24H40z" fill="#d9f99d"/><path d="M40 300q60-20 120 0t120 0 120 0 40-6v10H40z" fill="#65a30d" opacity=".55"/>
+<path d="M44 168l76-56 76 56z" fill="#c2410c"/><rect x="56" y="166" width="128" height="134" fill="#fde68a" stroke="#c2410c" stroke-width="3"/><rect x="92" y="214" width="56" height="86" fill="#b45309"/><path d="M92 214l56 86M148 214l-56 86" stroke="#fde68a" stroke-width="4"/>
+<g transform="translate(186 126) scale(.86)">
+<path d="M18 120c-10 0-16 34-10 60" stroke="#8a5a3b" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="8" cy="182" r="7" fill="#5b3a26"/>
+<rect x="30" y="148" width="16" height="66" rx="6" fill="#9a6a4a"/><rect x="62" y="150" width="16" height="64" rx="6" fill="#b07a55"/><rect x="138" y="150" width="16" height="64" rx="6" fill="#9a6a4a"/><rect x="168" y="148" width="16" height="66" rx="6" fill="#b07a55"/>
+<rect x="28" y="208" width="20" height="8" rx="3" fill="#1e293b"/><rect x="60" y="208" width="20" height="8" rx="3" fill="#1e293b"/><rect x="136" y="208" width="20" height="8" rx="3" fill="#1e293b"/><rect x="166" y="208" width="20" height="8" rx="3" fill="#1e293b"/>
+<path d="M16 100c0-26 22-40 60-40h80c34 0 50 16 50 44v26c0 22-16 34-40 34H56c-26 0-40-14-40-36z" fill="#c68a5c"/>
+<path d="M130 62c6-22 30-26 40-6" fill="#c68a5c"/>
+<ellipse cx="90" cy="112" rx="26" ry="18" fill="#a8704a" opacity=".55"/><ellipse cx="150" cy="128" rx="18" ry="12" fill="#a8704a" opacity=".45"/>
+<path d="M112 166c4 14 22 14 26 0" fill="#e7b48f"/>
+<g transform="translate(196 48)">
+<path d="M-6 30c0-18 12-30 30-30s30 12 30 30v34c0 18-12 28-30 28S-6 82-6 64z" fill="#d49a6a"/>
+<path d="M2 10c-10-14-8-30 4-38" stroke="#5b3a26" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M46 10c10-14 8-30-4-38" stroke="#5b3a26" stroke-width="6" fill="none" stroke-linecap="round"/>
+<path d="M-6 26c-26 2-36 14-34 26 14 0 26-6 34-14z" fill="#b07a55"/><path d="M54 26c26 2 36 14 34 26-14 0-26-6-34-14z" fill="#b07a55"/>
+<rect x="2" y="66" width="44" height="26" rx="13" fill="#f2c9a6"/><circle cx="14" cy="78" r="3.5" fill="#5b3a26"/><circle cx="34" cy="78" r="3.5" fill="#5b3a26"/>
+<circle cx="8" cy="42" r="5" fill="#1e293b"/><circle cx="40" cy="42" r="5" fill="#1e293b"/><circle cx="10" cy="40" r="1.6" fill="#ffffff"/><circle cx="42" cy="40" r="1.6" fill="#ffffff"/>
+<path d="M18 20h12" stroke="#a8704a" stroke-width="4" stroke-linecap="round"/>
+</g>
+<path d="M200 160c10 10 28 10 40 0" stroke="#ea580c" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="220" cy="172" r="7" fill="#fbbf24"/>
+</g>
+<path d="M60 300c4-14 8-14 12 0M380 300c4-16 9-16 14 0M410 300c3-10 6-10 9 0" stroke="#65a30d" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
