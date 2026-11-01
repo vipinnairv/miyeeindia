@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Community Help | Compliance Community Hub</title>
+<meta name="description" content="Plain-language compliance awareness for citizens, survival guides for micro-businesses and a study zone for students. Authored by Vipin.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="community" data-root="">
+<main id="main">
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Community Help &amp; Compliance Awareness</span>
+    <h1>Compliance knowledge for everyone, not just professionals</h1>
+    <p class="lead">Three learning tracks: everyday awareness for citizens and taxpayers, survival guides for micro and small businesses, and a structured study zone for students. Authored by Vipin.</p>
+  </div>
+</section>
+
+<section class="section">
+<div class="wrap">
+  <div class="track-tabs tabs" role="tablist" aria-label="Learning tracks">
+    <button class="tab" role="tab" id="t-awareness" aria-controls="awareness" data-track="awareness" aria-pressed="true">Public Awareness</button>
+    <button class="tab" role="tab" id="t-msme" aria-controls="msme" data-track="msme" aria-pressed="false">Micro-Business (MSME)</button>
+    <button class="tab" role="tab" id="t-students" aria-controls="students" data-track="students" aria-pressed="false">Student Study Zone</button>
+  </div>
+
+  <!-- TRACK 1: PUBLIC AWARENESS -->
+  <div class="track-panel" id="awareness" role="tabpanel" aria-labelledby="t-awareness">
+    <div class="meta" style="margin-bottom:16px"><span class="author-badge">Authored by Vipin</span><span>Updated October 2026</span></div>
+
+    <h2>Jargon-free explainers</h2>
+    <div class="grid grid-3">
+      <div class="card"><h3>What is the AIS and why should I check it?</h3><p>The Annual Information Statement on incometax.gov.in shows what the tax department already knows about you: salary, interest, dividends, share and mutual fund sales, property purchases, high-value spending and TDS. Before filing your return, open it and make sure every item is either included in your return or, if wrong, flagged through the feedback option. Most notices today begin with a mismatch between the AIS and the return.</p></div>
+      <div class="card"><h3>Do I need to file a return if my tax is nil?</h3><p>Often yes. Filing is required when your gross income before deductions exceeds the basic exemption limit of your regime (Rs. 4 lakh under the new regime), even if the Rs. 60,000 rebate brings tax to nil. Filing is also compulsory in specified cases, such as depositing more than Rs. 1 crore in current accounts, spending more than Rs. 2 lakh on foreign travel or more than Rs. 1 lakh on electricity in a year, regardless of income.</p></div>
+      <div class="card"><h3>Is that GST bill genuine?</h3><p>Every registered supplier must print a 15-character GSTIN on the invoice. Open gst.gov.in, choose Search Taxpayer, and enter the GSTIN. If the business is not found, is cancelled, or the name differs, ask for clarification. An unregistered person cannot collect GST from you. For restaurants and shops, the rate charged should match the current notified rate for that item.</p></div>
+      <div class="card"><h3>Cash rules that surprise people</h3><p>No one may receive Rs. 2 lakh or more in cash from a person in a day, for a single transaction or for one event (Section 269ST); the penalty equals the amount received. Loans and deposits of Rs. 20,000 or more must not be taken or repaid in cash (Sections 269SS and 269T). Businesses lose the deduction for cash expenses above Rs. 10,000 to a person in a day (Section 40A(3)).</p></div>
+      <div class="card"><h3>Gifts and taxes</h3><p>Gifts from specified relatives (spouse, siblings, parents, children and their spouses, and others defined in law) and gifts on marriage or by inheritance are not taxed. Gifts from others are taxable in the receiver's hands if the total exceeds Rs. 50,000 in a year (Section 56(2)(x)), and then the entire amount is taxable, not just the excess.</p></div>
+      <div class="card"><h3>Your salary slip and the new labour law</h3><p>Under the Labour Codes in force from 21 November 2025, every employee must get an appointment letter, monthly wages must be paid by the 7th of the next month, and full and final settlement must be completed within two working days of leaving. If allowances make up more than half your pay, part of them counts as wages for PF and gratuity.</p></div>
+    </div>
+
+    <h2 style="margin-top:40px">Myth vs fact</h2>
+    <p class="muted">Tap a card to reveal the fact.</p>
+    <div class="grid grid-3" id="myths"></div>
+
+    <h2 style="margin-top:40px">Statutory due-date calendar</h2>
+    <div class="card">
+      <div class="cal-controls">
+        <label>Month <select id="cal-month"></select></label>
+        <label>Category <select id="cal-cat"><option value="all">All</option><option value="income-tax">Income Tax</option><option value="gst">GST</option><option value="mca">Company / LLP</option><option value="labour">Labour</option></select></label>
+      </div>
+      <ul class="cal-list" id="cal-list"></ul>
+      <p class="muted" style="font-size:.85rem;margin-top:12px">Dates shown are statutory due dates. When a due date falls on a holiday or the Government extends it, the notified date applies. Always confirm on the official portal.</p>
+    </div>
+
+    <h2 style="margin-top:40px">Penalty-avoidance checklist for individual taxpayers</h2>
+    <div class="card checklist-ui" id="checklist">
+      <p class="muted" style="margin-top:0">Tick items as you complete them. Your progress is saved in this browser only.</p>
+      <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+      <p id="progress-text" class="muted" style="margin:0 0 8px;font-size:.85rem"></p>
+    </div>
+
+    <h2 style="margin-top:40px">Frequently asked questions</h2>
+    <details class="faq"><summary>I received an income tax notice by email. Is it genuine?</summary><div>Genuine notices carry a Document Identification Number (DIN) and appear under Pending Actions on incometax.gov.in after you log in. Never click payment links in messages. Verify the DIN using the "Authenticate notice" service on the portal before responding.</div></details>
+    <details class="faq"><summary>What happens if my PAN is not linked to Aadhaar?</summary><div>An unlinked PAN becomes inoperative. TDS and TCS are then applied at higher rates and refunds are withheld. You can link it on the e-filing portal after paying the prescribed fee, and the PAN becomes operative again after linking.</div></details>
+    <details class="faq"><summary>I missed the return due date. What can I do?</summary><div>You can file a belated return by 31 December following the year with a late fee of Rs. 5,000 (Rs. 1,000 if income is up to Rs. 5 lakh) and interest on any unpaid tax. After that, an updated return (ITR-U) can be filed within the extended window, with additional tax that rises with time.</div></details>
+    <details class="faq"><summary>Do I have to report foreign assets?</summary><div>Residents must disclose foreign bank accounts, shares, property and other assets in Schedule FA of the return, even if they generate no income. Non-disclosure can attract penalties under the Black Money (Undisclosed Foreign Income and Assets) and Imposition of Tax Act, 2015, with relief introduced for small balances.</div></details>
+
+    <div class="callout" style="margin-top:24px"><strong>Sources and statutory references:</strong> Income-tax Act, 1961 and Income-tax Act, 2025 (Sections 56(2)(x), 139(1) and its provisos, 269SS, 269ST, 269T, 271DA, 40A(3), 234F, 139(8A) references); CBDT Circular No. 19/2019 (DIN); Black Money Act, 2015; CGST Act, 2017 (Sections 22, 25 and 31) and the "Search Taxpayer" service on gst.gov.in; Code on Wages, 2019 and Code on Social Security, 2020 (Ministry of Labour notification, 21 November 2025). Portals: incometax.gov.in, gst.gov.in, labour.gov.in.</div>
+  </div>
+
+  <!-- TRACK 2: MSME -->
+  <div class="track-panel" id="msme" role="tabpanel" aria-labelledby="t-msme" hidden>
+    <div class="meta" style="margin-bottom:16px"><span class="author-badge">Authored by Vipin</span><span>Updated October 2026</span></div>
+
+    <h2>Udyam Registration: what it is and why it pays</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>The basics</h3>
+        <p>Udyam Registration is a free, online, paperless registration for micro, small and medium enterprises on udyamregistration.gov.in. It needs only Aadhaar of the proprietor, partner or authorised signatory, and PAN (and GSTIN where applicable). Investment and turnover are picked up from income tax and GST data. There is no renewal and no fee; beware of websites that charge for it.</p>
+        <div class="table-wrap"><table class="data"><thead><tr><th>Class (from 1 April 2025)</th><th>Investment in plant, machinery or equipment</th><th>Turnover</th></tr></thead><tbody>
+          <tr><td>Micro</td><td>Up to Rs. 2.5 crore</td><td>Up to Rs. 10 crore</td></tr>
+          <tr><td>Small</td><td>Up to Rs. 25 crore</td><td>Up to Rs. 100 crore</td></tr>
+          <tr><td>Medium</td><td>Up to Rs. 125 crore</td><td>Up to Rs. 500 crore</td></tr>
+        </tbody></table></div>
+        <p>Both limits must be met. Exports are excluded from turnover for classification. Informal micro enterprises without GST or PAN can register on the Udyam Assist Platform for priority sector lending benefits.</p>
+      </div>
+      <div class="card">
+        <h3>Benefits you can actually use</h3>
+        <ul class="muted" style="padding-left:1.1em">
+          <li><strong>Delayed payment protection:</strong> buyers must pay micro and small suppliers within the agreed period, which cannot exceed 45 days, or within 15 days where there is no agreement (MSMED Act, Section 15).</li>
+          <li><strong>Compound interest on delays</strong> at three times the bank rate notified by the RBI, with monthly rests (Section 16).</li>
+          <li><strong>Tax pressure on buyers:</strong> buyers lose their income tax deduction for MSE dues paid late (Income-tax Act, Section 43B(h) reference), so they prioritise registered suppliers.</li>
+          <li><strong>Collateral-free credit</strong> through the Credit Guarantee Fund Trust for Micro and Small Enterprises (CGTMSE), with guarantee limits revised upwards in 2025.</li>
+          <li><strong>Government procurement:</strong> central ministries and CPSEs must procure at least 25% of their annual purchases from micro and small enterprises, including 3% from women-owned and 4% from SC/ST-owned enterprises, with tender fee and EMD exemptions.</li>
+          <li><strong>Priority sector lending</strong> and access to schemes of the Ministry of MSME and the States.</li>
+          <li><strong>TReDS:</strong> sell invoices from large buyers on the Trade Receivables Discounting System to get paid quickly without recourse.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 style="margin-top:40px">MSME Samadhaan: recovering delayed payments</h2>
+    <div class="card">
+      <ol class="steps" style="padding-left:1.2em">
+        <li><strong>Check eligibility:</strong> you must be a micro or small enterprise registered on Udyam as a manufacturer or service provider at the time of supply. Medium enterprises and traders cannot use this route.</li>
+        <li><strong>Send a written demand</strong> to the buyer citing invoices, acceptance dates, the 15 or 45 day limit and interest under Section 16.</li>
+        <li><strong>File online</strong> on samadhaan.msme.gov.in with Udyam number, buyer details, invoices, proof of delivery and acceptance, and correspondence.</li>
+        <li><strong>Micro and Small Enterprise Facilitation Council (MSEFC)</strong> of the State takes up the reference under Section 18. It first attempts conciliation; if that fails, it arbitrates or refers the matter to an arbitration institution. The award should ordinarily be made within 90 days of the reference.</li>
+        <li><strong>Appeal protection:</strong> a buyer who wants to challenge the award in court must first deposit 75% of the awarded amount (Section 19).</li>
+      </ol>
+      <div class="callout tip"><strong>Prevention beats litigation:</strong> state payment terms on every invoice and purchase order, print your Udyam number on invoices, and send a polite reminder on day 30 and day 44.</div>
+    </div>
+
+    <h2 style="margin-top:40px">Bookkeeping best practices for a one-person business</h2>
+    <div class="grid grid-3">
+      <div class="card"><h3>Separate the money</h3><p>Open a current account only for the business. Route every sale and every business expense through it. Mixing personal and business money is the most common reason small businesses cannot explain their numbers.</p></div>
+      <div class="card"><h3>Prefer digital receipts</h3><p>Under the presumptive scheme, digital receipts are taxed at 6% instead of 8%, and keeping cash below 5% of turnover raises the presumptive limit to Rs. 3 crore. Use UPI, cards and bank transfers.</p></div>
+      <div class="card"><h3>Weekly 30-minute routine</h3><p>File every bill in a dated folder (or a phone app), update a simple sales and expense sheet, and reconcile with the bank statement. Monthly, match sales with GST returns.</p></div>
+      <div class="card"><h3>Number your invoices</h3><p>GST requires consecutive serial numbers for each financial year. Never reuse or skip numbers; cancelled invoices should be retained and marked cancelled.</p></div>
+      <div class="card"><h3>Keep records long enough</h3><p>Keep GST records for 72 months from the due date of the annual return, and income tax records for at least six years. Store scanned copies in two places.</p></div>
+      <div class="card"><h3>Know your thresholds</h3><p>Track turnover monthly against GST registration (Rs. 20 or 40 lakh), presumptive and audit limits (Rs. 1 crore, Rs. 2 or 3 crore), and TDS obligations, so you act before crossing them.</p></div>
+    </div>
+
+    <h2 style="margin-top:40px">Low-cost statutory compliance roadmap</h2>
+    <div class="table-wrap"><table class="data">
+      <thead><tr><th>When</th><th>What to do</th><th>Typical cost</th></tr></thead>
+      <tbody>
+        <tr><td>Month 0 (start)</td><td>PAN for the entity (if not a proprietorship), current account, Udyam registration, Shops and Establishments registration or intimation under State law, GST registration if threshold crossed or compulsory, Professional Tax enrolment where applicable</td><td>Udyam and GST are free on the official portals; State fees for shops registration are nominal</td></tr>
+        <tr><td>Every month</td><td>Issue GST invoices, file GSTR-1 and GSTR-3B (or use QRMP to file quarterly and pay monthly), deposit TDS if deducted, pay PF and ESIC if covered</td><td>Free portals; accounting software or a part-time accountant</td></tr>
+        <tr><td>Every quarter</td><td>TDS statements if applicable; QRMP returns; CMP-08 if under composition</td><td>As above</td></tr>
+        <tr><td>Every year</td><td>Income tax return (presumptive scheme if eligible), advance tax by 15 March for presumptive taxpayers, GSTR-9 if turnover exceeds Rs. 2 crore, renewal of trade licences</td><td>Professional fee for return filing if needed</td></tr>
+        <tr><td>On growth</td><td>Move to a partnership, LLP or private company when liability protection, fund raising or contracts require it; re-check e-invoicing (Rs. 5 crore) and tax audit limits</td><td>Incorporation fees and annual ROC filings</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 style="margin-top:40px">Frequently asked questions</h2>
+    <details class="faq"><summary>Is Udyam registration mandatory?</summary><div>It is voluntary, but without it you cannot claim the delayed payment protection, MSE procurement preferences or most MSME scheme benefits. Registration is free and takes minutes.</div></details>
+    <details class="faq"><summary>Can a trader get Udyam registration?</summary><div>Retail and wholesale traders can register for the purpose of priority sector lending. They are not covered by the delayed payment provisions of the MSMED Act, so Section 15 to 17 protection and Section 43B(h) do not apply to supplies by them.</div></details>
+    <details class="faq"><summary>I sell only on an e-commerce marketplace. Do I need GST?</summary><div>Suppliers of goods through e-commerce operators ordinarily need registration irrespective of turnover, but the law was relaxed from 2023 for small suppliers meeting conditions, and service providers through marketplaces are exempt up to the threshold. Check the current conditions on cbic-gst.gov.in before you list products.</div></details>
+    <details class="faq"><summary>My buyer says it will pay in 90 days. Is that allowed?</summary><div>For micro and small suppliers, an agreed period cannot exceed 45 days from acceptance. A contract term of 90 days does not override the law; interest at three times the bank rate accrues after the permitted period.</div></details>
+
+    <div class="callout" style="margin-top:24px"><strong>Sources and statutory references:</strong> Micro, Small and Medium Enterprises Development Act, 2006 (Sections 7, 15, 16, 17, 18, 19 and 22); Ministry of MSME notification S.O. 1364(E) dated 21 March 2025 (classification); Udyam Registration notification S.O. 2119(E) dated 26 June 2020; Public Procurement Policy for Micro and Small Enterprises Order, 2012, as amended; Income-tax Act, Sections 43B(h), 44AD and 44AB references; CGST Act, Sections 22, 24 and 35. Portals: udyamregistration.gov.in, samadhaan.msme.gov.in, msme.gov.in, cgtmse.in.</div>
+  </div>
+
+  <!-- TRACK 3: STUDENTS -->
+  <div class="track-panel" id="students" role="tabpanel" aria-labelledby="t-students" hidden>
+    <div class="meta" style="margin-bottom:16px"><span class="author-badge">Authored by Vipin</span><span>Updated October 2026</span></div>
+    <p class="muted">Built for B.Com, M.Com, BBA, MBA, LL.B, CA, CS and CMA students. Use the memory tables for revision, the case summaries for answers that need authority, and the walkthroughs to connect theory with practice.</p>
+
+    <h2>Module 1: Section-wise memory tables</h2>
+    <div class="grid grid-2">
+      <div class="card"><h3>Companies Act, 2013</h3><div class="table-wrap"><table class="data"><thead><tr><th>Section</th><th>Remember it as</th></tr></thead><tbody>
+        <tr><td>2(85)</td><td>Small company definition</td></tr><tr><td>7</td><td>Incorporation</td></tr><tr><td>10A</td><td>Commencement of business (INC-20A, 180 days)</td></tr>
+        <tr><td>92</td><td>Annual return (MGT-7, MGT-7A)</td></tr><tr><td>96</td><td>AGM within 6 months of year end</td></tr><tr><td>134</td><td>Board's report and approval of accounts</td></tr>
+        <tr><td>135</td><td>CSR (2% of average net profit)</td></tr><tr><td>137</td><td>Filing financial statements (AOC-4)</td></tr><tr><td>139</td><td>Appointment of auditor</td></tr>
+        <tr><td>164</td><td>Disqualification of directors</td></tr><tr><td>173</td><td>Board meetings</td></tr><tr><td>185 and 186</td><td>Loans to directors; loans and investments by company</td></tr>
+        <tr><td>188</td><td>Related party transactions</td></tr><tr><td>248</td><td>Strike-off</td></tr></tbody></table></div></div>
+      <div class="card"><h3>CGST Act, 2017</h3><div class="table-wrap"><table class="data"><thead><tr><th>Section</th><th>Remember it as</th></tr></thead><tbody>
+        <tr><td>2(6)</td><td>Aggregate turnover</td></tr><tr><td>7</td><td>Scope of supply</td></tr><tr><td>9</td><td>Levy, including reverse charge in 9(3) and 9(4)</td></tr>
+        <tr><td>10</td><td>Composition levy</td></tr><tr><td>16</td><td>Eligibility and conditions for ITC</td></tr><tr><td>17(5)</td><td>Blocked credits</td></tr>
+        <tr><td>22 and 24</td><td>Registration: threshold and compulsory</td></tr><tr><td>31</td><td>Tax invoice</td></tr><tr><td>37, 39, 44</td><td>GSTR-1, GSTR-3B, GSTR-9</td></tr>
+        <tr><td>50</td><td>Interest</td></tr><tr><td>73, 74, 74A</td><td>Demand and recovery</td></tr><tr><td>107 and 112</td><td>Appeals to Appellate Authority and Tribunal</td></tr>
+        <tr><td>122</td><td>Penalties</td></tr><tr><td>129</td><td>Detention of goods in transit</td></tr></tbody></table></div></div>
+      <div class="card"><h3>Income-tax Act, 1961 (familiar labels)</h3><div class="table-wrap"><table class="data"><thead><tr><th>Section</th><th>Remember it as</th></tr></thead><tbody>
+        <tr><td>2(24)</td><td>Income (inclusive definition)</td></tr><tr><td>10</td><td>Exempt incomes</td></tr><tr><td>14</td><td>Five heads of income</td></tr>
+        <tr><td>44AB</td><td>Tax audit</td></tr><tr><td>44AD, 44ADA, 44AE</td><td>Presumptive taxation</td></tr><tr><td>80C to 80U</td><td>Chapter VI-A deductions</td></tr>
+        <tr><td>115BAC</td><td>New (default) regime</td></tr><tr><td>139</td><td>Return of income, including 139(8A) updated return</td></tr><tr><td>143 and 144B</td><td>Assessment and faceless assessment</td></tr>
+        <tr><td>148 and 148A</td><td>Reassessment</td></tr><tr><td>192 to 196D</td><td>TDS</td></tr><tr><td>206C</td><td>TCS</td></tr><tr><td>234A, B, C</td><td>Interest for late filing and advance tax defaults</td></tr></tbody></table></div>
+        <p style="font-size:.85rem">From 1 April 2026 the Income-tax Act, 2025 applies with new numbering. Learn both, using the official mapping on incometax.gov.in.</p></div>
+      <div class="card"><h3>Labour law quick numbers</h3><div class="table-wrap"><table class="data"><thead><tr><th>Item</th><th>Number to remember</th></tr></thead><tbody>
+        <tr><td>EPF coverage</td><td>20 or more employees; Rs. 15,000 wage ceiling</td></tr><tr><td>EPF rates</td><td>12% + 12% (8.33% EPS on up to Rs. 15,000)</td></tr>
+        <tr><td>ESIC coverage</td><td>10 or more employees; Rs. 21,000 wage ceiling</td></tr><tr><td>ESIC rates</td><td>0.75% employee, 3.25% employer</td></tr>
+        <tr><td>Gratuity</td><td>5 years (1 year for fixed-term under the Code); 15/26 formula; Rs. 20 lakh ceiling</td></tr>
+        <tr><td>Maternity leave</td><td>26 weeks for first two children</td></tr><tr><td>POSH committee</td><td>10 or more employees; inquiry in 90 days</td></tr>
+        <tr><td>Codes in force</td><td>21 November 2025</td></tr></tbody></table></div></div>
+    </div>
+
+    <h2 style="margin-top:40px">Module 2: Landmark case summaries</h2>
+    <div class="grid grid-2">
+      <div class="card"><span class="pill mca">Company law</span><h3 style="margin-top:8px">Salomon v. A. Salomon and Co. Ltd. [1897] AC 22 (House of Lords)</h3><p><strong>Principle:</strong> a company is a separate legal person distinct from its members, even where one person holds almost all the shares. Creditors of the company cannot reach the shareholder's personal assets merely because he controls the company. This is the foundation of limited liability and the reason courts "lift the veil" only in exceptional cases such as fraud.</p></div>
+      <div class="card"><span class="pill income-tax">Income tax</span><h3 style="margin-top:8px">McDowell and Co. Ltd. v. Commercial Tax Officer (1985) 3 SCC 230</h3><p><strong>Principle:</strong> tax planning within the law is legitimate, but colourable devices and dubious methods to avoid tax are not. The case is cited whenever arrangements lack commercial substance and exist only to defeat tax.</p></div>
+      <div class="card"><span class="pill income-tax">Income tax</span><h3 style="margin-top:8px">Union of India v. Azadi Bachao Andolan (2003) 263 ITR 706 (SC)</h3><p><strong>Principle:</strong> a Tax Residency Certificate issued by a treaty partner is sufficient evidence of residence, and treaty shopping is not illegal in the absence of a limitation of benefits clause. Later law (GAAR, the Multilateral Instrument's principal purpose test) narrowed this position.</p></div>
+      <div class="card"><span class="pill income-tax">Income tax</span><h3 style="margin-top:8px">Vodafone International Holdings B.V. v. Union of India (2012) 6 SCC 613</h3><p><strong>Principle:</strong> an offshore transfer of shares of a foreign holding company was not taxable in India under the law as it then stood. Parliament responded with a retrospective amendment in 2012 taxing indirect transfers, which was largely withdrawn for past transactions by the Taxation Laws (Amendment) Act, 2021.</p></div>
+      <div class="card"><span class="pill gst">GST</span><h3 style="margin-top:8px">Union of India v. Mohit Minerals Pvt. Ltd. (Supreme Court, 19 May 2022)</h3><p><strong>Principle:</strong> GST Council recommendations have persuasive, not binding, value for Parliament and State legislatures, reflecting cooperative federalism. The Court also struck down IGST on ocean freight on imports under CIF contracts as a levy on a composite supply already taxed.</p></div>
+      <div class="card"><span class="pill gst">GST</span><h3 style="margin-top:8px">Chief Commissioner of CGST v. Safari Retreats Pvt. Ltd. (Supreme Court, 3 October 2024)</h3><p><strong>Principle:</strong> "plant or machinery" in Section 17(5)(d) was read differently from "plant and machinery", and a building could qualify as a plant on a functionality test. The Finance Act, 2025 retrospectively amended the clause to "plant and machinery", limiting the effect of the judgment.</p></div>
+      <div class="card"><span class="pill labour">Labour law</span><h3 style="margin-top:8px">Vishaka v. State of Rajasthan (1997) 6 SCC 241</h3><p><strong>Principle:</strong> sexual harassment at the workplace violates fundamental rights under Articles 14, 15, 19(1)(g) and 21. The Court laid down guidelines that bound employers until the POSH Act, 2013 gave them statutory force.</p></div>
+      <div class="card"><span class="pill labour">Labour law</span><h3 style="margin-top:8px">Bangalore Water Supply and Sewerage Board v. A. Rajappa (1978) 2 SCC 213</h3><p><strong>Principle:</strong> the "triple test" for an industry: systematic activity, organised by cooperation between employer and employees, for the production or distribution of goods and services to satisfy human wants. It widened the reach of the Industrial Disputes Act.</p></div>
+      <div class="card"><span class="pill labour">Labour law and tax</span><h3 style="margin-top:8px">Checkmate Services Pvt. Ltd. v. CIT (Supreme Court, 12 October 2022)</h3><p><strong>Principle:</strong> employees' PF and ESI contributions deducted by the employer are held in trust; if deposited after the due date under those laws, the employer permanently loses the income tax deduction. Employer contributions are treated differently.</p></div>
+      <div class="card"><span class="pill gst">Indirect tax</span><h3 style="margin-top:8px">Tata Consultancy Services v. State of Andhra Pradesh (2005) 1 SCC 308</h3><p><strong>Principle:</strong> canned software recorded on a medium is "goods" for sales tax purposes. The reasoning on intangibles as goods remains a useful foundation for understanding the classification of digital products.</p></div>
+    </div>
+
+    <h2 style="margin-top:40px">Module 3: Comparative statutory charts</h2>
+    <h3>Choosing a business form</h3>
+    <div class="table-wrap"><table class="data">
+      <thead><tr><th>Feature</th><th>Proprietorship</th><th>Partnership firm</th><th>LLP</th><th>Private company</th></tr></thead>
+      <tbody>
+        <tr><td>Governing law</td><td>No specific law</td><td>Indian Partnership Act, 1932</td><td>LLP Act, 2008</td><td>Companies Act, 2013</td></tr>
+        <tr><td>Separate legal entity</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>Liability</td><td>Unlimited</td><td>Unlimited, joint and several</td><td>Limited to agreed contribution</td><td>Limited to unpaid share capital</td></tr>
+        <tr><td>Minimum members</td><td>1</td><td>2</td><td>2 partners (2 designated partners)</td><td>2 members, 2 directors (OPC: 1)</td></tr>
+        <tr><td>Annual ROC filings</td><td>None</td><td>None (registration with State Registrar of Firms is optional but advisable)</td><td>Form 8 and Form 11</td><td>AOC-4 and MGT-7 or MGT-7A, plus event filings</td></tr>
+        <tr><td>Audit</td><td>Only tax audit if limits crossed</td><td>Only tax audit if limits crossed</td><td>If turnover above Rs. 40 lakh or contribution above Rs. 25 lakh</td><td>Always (statutory audit)</td></tr>
+        <tr><td>Income tax rate</td><td>Slab rates of the owner</td><td>30% plus surcharge and cess</td><td>30% plus surcharge and cess</td><td>25% or 30%, or 22% under Section 115BAA</td></tr>
+        <tr><td>Raising equity</td><td>Not possible</td><td>Admission of partners</td><td>Admission of partners; FDI under automatic route in eligible sectors</td><td>Easiest: shares, ESOPs, venture funding</td></tr>
+      </tbody>
+    </table></div>
+    <h3>GST demand provisions compared</h3>
+    <div class="table-wrap"><table class="data">
+      <thead><tr><th>Feature</th><th>Section 73</th><th>Section 74</th><th>Section 74A</th></tr></thead>
+      <tbody>
+        <tr><td>Periods covered</td><td>Up to FY 2023-24</td><td>Up to FY 2023-24</td><td>FY 2024-25 onwards</td></tr>
+        <tr><td>Nature</td><td>No fraud or suppression</td><td>Fraud, wilful misstatement or suppression</td><td>Both, with different penalties</td></tr>
+        <tr><td>Time limit for order</td><td>3 years from due date of annual return</td><td>5 years from due date of annual return</td><td>SCN within 42 months; order within 12 months of SCN (extendable by 6 months)</td></tr>
+        <tr><td>Penalty if paid early</td><td>Nil if paid before or within 30 days of SCN</td><td>15% before SCN, 25% within 30 days of SCN</td><td>Non-fraud: nil within 60 days of SCN. Fraud: 15% before SCN, 25% within 60 days of SCN, 50% within 60 days of order</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 style="margin-top:40px">Module 4: Practical filing walkthroughs</h2>
+    <div class="grid grid-3">
+      <div class="card"><h3>Filing ITR-1 (Sahaj)</h3><ol class="muted" style="padding-left:1.2em">
+        <li>Log in to incometax.gov.in with PAN and password.</li><li>Download and review AIS and Form 26AS.</li><li>Go to e-File, Income Tax Returns, File Income Tax Return; select the year and online mode.</li><li>Choose ITR-1 if eligible (resident, income up to Rs. 50 lakh from salary, one house property, other sources and limited LTCG under Section 112A).</li><li>Verify pre-filled salary, interest and TDS; choose the regime; add deductions if under the old regime.</li><li>Pay any balance tax through e-Pay Tax and add the challan.</li><li>Submit and e-verify within 30 days using Aadhaar OTP or net banking.</li></ol></div>
+      <div class="card"><h3>Filing GSTR-3B</h3><ol class="muted" style="padding-left:1.2em">
+        <li>File GSTR-1 first and act on invoices in IMS.</li><li>Open Returns Dashboard, choose the period, and open GSTR-3B.</li><li>Check the auto-populated liability (Table 3.1) and ITC (Table 4) against your books.</li><li>Enter reversals and ineligible ITC.</li><li>Save, then Proceed to Payment; offset liability using credit in the legal order and pay cash balance.</li><li>File with DSC or EVC and download the filed return.</li></ol></div>
+      <div class="card"><h3>Udyam registration</h3><ol class="muted" style="padding-left:1.2em">
+        <li>Open udyamregistration.gov.in and choose the option for new entrepreneurs.</li><li>Enter Aadhaar number and name; validate with OTP.</li><li>Enter PAN and organisation type; the system fetches PAN data.</li><li>Fill in business address, bank details, NIC code of activity, and employment.</li><li>Submit with final OTP; download the Udyam certificate with the permanent registration number.</li></ol></div>
+    </div>
+
+    <h2 style="margin-top:40px">Frequently asked questions</h2>
+    <details class="faq"><summary>How should I cite sections in exam answers now that the Income-tax Act, 2025 is in force?</summary><div>Follow the applicability notified by your examining body. Many institutes announce which law applies to which attempt. Where both are relevant, write the new section with the old section in brackets.</div></details>
+    <details class="faq"><summary>Which official sources should students rely on?</summary><div>Bare Acts on India Code (indiacode.nic.in), notifications and circulars on cbic-gst.gov.in, incometaxindia.gov.in, mca.gov.in, sebi.gov.in and labour.gov.in, and judgments on the Supreme Court website. Use commentaries for understanding, but quote the statute.</div></details>
+
+    <div class="callout" style="margin-top:24px"><strong>Sources and statutory references:</strong> Companies Act, 2013; CGST Act, 2017; Income-tax Act, 1961 and Income-tax Act, 2025; Indian Partnership Act, 1932; LLP Act, 2008; Code on Social Security, 2020 and the POSH Act, 2013; judgments as cited above (Supreme Court of India and House of Lords). Portals: indiacode.nic.in, main.sci.gov.in, incometax.gov.in, gst.gov.in, udyamregistration.gov.in.</div>
+  </div>
+</div>
+</section>
+</main>
+<script src="assets/js/site.js"></script>
+<script>
+(function () {
+  // Track tabs, linkable with #awareness, #msme, #students
+  function show(id) {
+    var ok = ["awareness", "msme", "students"].indexOf(id) !== -1 ? id : "awareness";
+    document.querySelectorAll(".track-panel").forEach(function (p) { p.hidden = p.id !== ok; });
+    document.querySelectorAll("[data-track]").forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-track") === ok ? "true" : "false"); });
+  }
+  document.querySelectorAll("[data-track]").forEach(function (b) {
+    b.addEventListener("click", function () { var id = b.getAttribute("data-track"); history.replaceState(null, "", "#" + id); show(id); });
+  });
+  window.addEventListener("hashchange", function () { show(location.hash.slice(1)); });
+  show(location.hash.slice(1));
+
+  // Myth vs fact cards
+  var MYTHS = [
+    ["My income is below Rs. 12 lakh, so I never need to file a return.", "The Rs. 60,000 rebate can make tax nil, but filing is still required if gross income exceeds the basic exemption limit of Rs. 4 lakh under the new regime, or if you meet any compulsory filing condition."],
+    ["Interest on my savings account is tax free.", "Savings interest is taxable. Under the old regime a deduction of up to Rs. 10,000 (Rs. 50,000 for senior citizens on deposits) is available; under the new regime it is not."],
+    ["A cash gift from a friend is always tax free.", "Gifts from non-relatives that total more than Rs. 50,000 in a year are fully taxable in the receiver's hands, except gifts on marriage or by inheritance."],
+    ["If my shop is closed, I can simply stop filing GST returns.", "Registration continues until cancelled. Apply for cancellation in REG-16; until then, nil returns are due and late fees accumulate."],
+    ["Directors of a small private company are not personally affected by missed ROC filings.", "If financial statements or annual returns are not filed for three continuous years, every director is disqualified for five years under Section 164(2)."],
+    ["A rent agreement in my spouse's name lets me claim HRA without any other proof.", "HRA requires actual payment of rent; if annual rent exceeds Rs. 1 lakh, the landlord's PAN is needed. Paying rent to a spouse who owns the house is closely examined and the spouse must report the rent as income."]
+  ];
+  document.getElementById("myths").innerHTML = MYTHS.map(function (m) {
+    return '<button class="card myth" type="button" aria-expanded="false"><span class="label m">Myth</span><p style="color:var(--text);font-weight:600">' + m[0] + '</p><div class="fact"><span class="label f">Fact</span><p>' + m[1] + "</p></div></button>";
+  }).join("");
+  document.querySelectorAll(".myth").forEach(function (b) {
+    b.addEventListener("click", function () { b.setAttribute("aria-expanded", b.getAttribute("aria-expanded") === "true" ? "false" : "true"); });
+  });
+
+  // Due-date calendar
+  var MONTHLY = [
+    [7, "income-tax", "Deposit TDS and TCS deducted or collected in the previous month (March deductions: 30 April)"],
+    [10, "gst", "GSTR-7 (TDS under GST) and GSTR-8 (TCS by e-commerce operators)"],
+    [11, "gst", "GSTR-1 for monthly filers"],
+    [13, "gst", "GSTR-6 (Input Service Distributor); IFF for QRMP taxpayers in the first two months of a quarter"],
+    [15, "labour", "EPF ECR and ESIC contribution for the previous month"],
+    [20, "gst", "GSTR-3B for monthly filers"],
+    [25, "gst", "PMT-06 tax payment by QRMP taxpayers (first two months of a quarter)"]
+  ];
+  var ANNUAL = {
+    1: [[31, "income-tax", "TDS and TCS statements for October to December quarter"]],
+    3: [[15, "income-tax", "Advance tax: 100% (the only instalment for Sections 44AD and 44ADA)"]],
+    4: [[18, "gst", "CMP-08 for January to March quarter (composition)"], [30, "income-tax", "TDS deposit for March deductions"], [30, "gst", "GSTR-4 annual return (composition)"], [30, "mca", "MSME-1 for October to March half year"]],
+    5: [[30, "mca", "LLP Form 11 (annual return)"], [31, "income-tax", "TDS and TCS statements for January to March quarter"]],
+    6: [[15, "income-tax", "Advance tax: 15%; Form 16 to employees"], [30, "mca", "DPT-3 return of deposits"]],
+    7: [[13, "gst", "GSTR-1 for QRMP taxpayers (April to June)"], [18, "gst", "CMP-08 for April to June quarter"], [22, "gst", "GSTR-3B for QRMP (Category X States; 24th for others)"], [31, "income-tax", "Income tax return for non-audit cases; TDS statements for April to June quarter"]],
+    9: [[15, "income-tax", "Advance tax: 45%"], [30, "income-tax", "Tax audit report"], [30, "mca", "AGM deadline; DIR-3 KYC"]],
+    10: [[13, "gst", "GSTR-1 for QRMP taxpayers (July to September)"], [18, "gst", "CMP-08 for July to September quarter"], [30, "mca", "LLP Form 8; AOC-4 if AGM held on 30 September"], [31, "income-tax", "Income tax return for audit cases; TDS statements for July to September quarter"], [31, "mca", "MSME-1 for April to September half year"]],
+    11: [[29, "mca", "MGT-7 or MGT-7A if AGM held on 30 September"], [30, "gst", "Last date to claim ITC of the previous financial year"], [30, "income-tax", "Return for transfer pricing cases"]],
+    12: [[15, "income-tax", "Advance tax: 75%"], [31, "income-tax", "Belated and revised return"], [31, "gst", "GSTR-9 and GSTR-9C for the previous financial year"]]
+  };
+  var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var LABEL = { "income-tax": "Income Tax", gst: "GST", mca: "Company / LLP", labour: "Labour" };
+  var mSel = document.getElementById("cal-month"), cSel = document.getElementById("cal-cat");
+  mSel.innerHTML = MONTHS.map(function (m, i) { return '<option value="' + (i + 1) + '">' + m + "</option>"; }).join("");
+  mSel.value = String(new Date().getMonth() + 1);
+  function renderCal() {
+    var m = +mSel.value, c = cSel.value;
+    var items = MONTHLY.concat(ANNUAL[m] || []).filter(function (x) { return c === "all" || x[1] === c; }).sort(function (a, b) { return a[0] - b[0]; });
+    document.getElementById("cal-list").innerHTML = items.map(function (x) {
+      return '<li><span class="cal-day">' + x[0] + '</span><span>' + x[2] + '</span><span class="pill ' + x[1] + '">' + LABEL[x[1]] + "</span></li>";
+    }).join("") || '<li class="muted">No items for this filter.</li>';
+  }
+  mSel.addEventListener("change", renderCal); cSel.addEventListener("change", renderCal); renderCal();
+
+  // Penalty-avoidance checklist with local progress
+  var CHECKS = [
+    "Link PAN with Aadhaar and keep mobile number and email current on the e-filing portal",
+    "Download AIS and Form 26AS and reconcile them before filing the return",
+    "Choose the tax regime consciously; business taxpayers file Form 10-IEA on time if opting out",
+    "Pay advance tax by 15 June, 15 September, 15 December and 15 March if liability is Rs. 10,000 or more",
+    "File the return by the due date and e-verify within 30 days",
+    "Report all bank interest, dividends and capital gains, including small amounts",
+    "Disclose foreign assets and income in Schedule FA if you are a resident",
+    "Avoid cash receipts of Rs. 2 lakh or more and cash loans of Rs. 20,000 or more",
+    "Keep rent receipts, landlord PAN and investment proofs if claiming old regime deductions",
+    "Check Pending Actions on the portal monthly and respond to notices within the time given"
+  ];
+  var KEY = "cch-checklist";
+  var done = {}; try { done = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
+  var box = document.getElementById("checklist");
+  box.insertAdjacentHTML("beforeend", CHECKS.map(function (t, i) {
+    return '<label><input type="checkbox" data-i="' + i + '"' + (done[i] ? " checked" : "") + "><span>" + t + "</span></label>";
+  }).join(""));
+  function progress() {
+    var n = box.querySelectorAll("input:checked").length;
+    document.getElementById("progress-bar").style.width = (n / CHECKS.length * 100) + "%";
+    document.getElementById("progress-text").textContent = n + " of " + CHECKS.length + " completed";
+  }
+  box.addEventListener("change", function (e) {
+    if (e.target.type !== "checkbox") return;
+    done[e.target.getAttribute("data-i")] = e.target.checked;
+    try { localStorage.setItem(KEY, JSON.stringify(done)); } catch (err) {}
+    progress();
+  });
+  progress();
+})();
+</script>
+</body>
+</html>
