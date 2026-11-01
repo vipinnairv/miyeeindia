@@ -43,14 +43,14 @@
     }
     return '<footer class="site-footer"><div class="wrap footer-grid">' +
       '<div class="footer-brand"><a class="brand" href="index.html"><span class="brand-text">Vipin <span>Nair</span></span></a>' +
-      "<p>Finance and accounts professional, CA Inter and GST Practitioner, based in Ahmedabad. I also write free, source-backed guides on Indian corporate, tax and labour compliance.</p>" +
+      "<p>Finance and accounts professional, CA Inter and GST Practitioner, based in Ahmedabad. I also write free, source-backed guides on Indian corporate, tax and labour compliance as a not-for-profit community service.</p><p class=\"fineprint\">Proud Ancient India, rich with young talent: together, we can lead a better nation.</p>" +
       '<p class="fineprint"><a href="assets/Vipin_Nair_Resume_2026.docx" download>Download resume</a></p></div>' +
       col("Portfolio", [["About", "index.html#about"], ["Experience", "index.html#experience"], ["Skills", "index.html#skills"], ["Projects", "index.html#projects"], ["Education", "index.html#education"]]) +
-      col("Knowledge Hub", [["News &amp; Blogs", "news.html"], ["Regulatory updates", "news.html#updates"], ["Community Help", "community.html"], ["Support Us", "support.html"], ["Gaumata Raksha", "gaushala.html"]]) +
+      col("Knowledge Hub", [["News &amp; Blogs", "news.html"], ["Regulatory updates", "news.html#updates"], ["Community Help", "community.html"], ["Support Us", "support.html"], ["Gaumata Raksha", "gaushala.html"], ["Mission &amp; Disclaimer", "disclaimer.html"], ["Privacy &amp; DPDP Act", "privacy.html"]]) +
       col("Connect", [[MAIL + " audit.vipin@gmail.com", "mailto:audit.vipin@gmail.com"], [LI + " LinkedIn", "https://www.linkedin.com/in/vipin-nair-22a789207/", 1], [X + " X (Twitter)", "https://x.com/vipinnairv", 1], ["GitHub", "https://github.com/vipinnairv", 1]]) +
       "</div>" +
-      '<div class="wrap footer-bottom"><p>&copy; ' + new Date().getFullYear() + " Vipin Nair. All rights reserved.</p><p>All articles authored by Vipin.</p></div>" +
-      '<div class="wrap footer-disclaimer"><p><strong>Disclaimer:</strong> the guides on this site are for education and general information only. They are not legal, tax or professional advice. Laws, rates and due dates change through notifications and circulars, so please verify with the official source before acting.</p></div>' +
+      '<div class="wrap footer-bottom"><p>&copy; ' + new Date().getFullYear() + " Vipin Nair. All rights reserved.</p><p><a href=\"disclaimer.html\">Disclaimer</a> &middot; <a href=\"privacy.html\">Privacy &amp; DPDP Act</a> &middot; All articles authored by Vipin</p></div>" +
+      '<div class="wrap footer-disclaimer"><p><strong>Disclaimer:</strong> this is a non-commercial, not-for-profit initiative undertaken purely for community and social service. The guides on this site are for education and general information only. They are not legal, tax or professional advice. Laws, rates and due dates change through notifications and circulars, so please verify with the official source before acting. <a href="disclaimer.html">Read the full disclaimer</a>.</p></div>' +
       "</footer>";
   }
 
