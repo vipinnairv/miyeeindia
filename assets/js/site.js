@@ -3,12 +3,12 @@
 (function () {
   var root = document.documentElement;
   try {
-    var saved = localStorage.getItem("cch-theme");
+    var saved = localStorage.getItem("theme");
     if (saved === "light" || saved === "dark") root.setAttribute("data-theme", saved);
   } catch (e) {}
 
   var NAV = [
-    { id: "home", label: "Home", href: "index.html" },
+    { id: "home", label: "Portfolio", href: "index.html" },
     { id: "news", label: "News & Blogs", href: "news.html" },
     { id: "community", label: "Community Help", href: "community.html" },
     { id: "support", label: "Support Us", href: "support.html" },
@@ -27,8 +27,8 @@
     }).join("");
     return '<a class="skip" href="#main">Skip to content</a>' +
       '<header class="site-header"><div class="wrap nav">' +
-      '<a class="brand" href="' + base + 'index.html"><span class="brand-mark" aria-hidden="true">CH</span>' +
-      '<span>Compliance Community Hub<small>Free regulatory knowledge for India</small></span></a>' +
+      '<a class="brand" href="' + base + 'index.html"><span class="brand-mark" aria-hidden="true">VN</span>' +
+      '<span>Vipin Nair<small>Compliance Community Hub</small></span></a>' +
       '<div class="nav-tools"><nav aria-label="Main"><ul class="nav-links" id="nav-links">' + links + "</ul></nav>" +
       '<button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle colour theme"></button>' +
       '<button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>' +
@@ -101,7 +101,7 @@
     tbtn.addEventListener("click", function () {
       var next = currentTheme() === "dark" ? "light" : "dark";
       root.setAttribute("data-theme", next);
-      try { localStorage.setItem("cch-theme", next); } catch (e) {}
+      try { localStorage.setItem("theme", next); } catch (e) {}
       sync();
     });
 
