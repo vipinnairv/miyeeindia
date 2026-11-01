@@ -6,19 +6,26 @@
 <title>Community Help | Compliance Community Hub</title>
 <meta name="description" content="Plain-language compliance awareness for citizens, survival guides for micro-businesses and a study zone for students. Authored by Vipin.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/theme.js"></script>
 </head>
-<body data-page="community" data-root="">
+<body data-page="community">
 <main id="main">
-<section class="hero">
+<header class="page-head split">
   <div class="wrap">
-    <span class="eyebrow">Community Help &amp; Compliance Awareness</span>
-    <h1>Compliance knowledge for everyone, not just professionals</h1>
-    <p class="lead">Three learning tracks: everyday awareness for citizens and taxpayers, survival guides for micro and small businesses, and a structured study zone for students. Authored by Vipin.</p>
+    <div>
+      <span class="eyebrow">Community Help</span>
+      <h1>Compliance knowledge for everyone, not only professionals</h1>
+      <p>Three practical learning tracks: everyday awareness for citizens and taxpayers, survival guides for micro and small businesses, and a structured study zone for students. Every resource is free and authored by Vipin.</p>
+      <div class="head-cta"><a class="btn btn-primary" href="#awareness">Start with the basics</a><a class="btn btn-ghost" href="#msme">For micro-businesses</a></div>
+    </div>
+    <figure><img src="assets/img/illustrations/community.svg" alt="People learning about compliance together" width="480" height="360"></figure>
   </div>
-</section>
+</header>
 
 <section class="section">
 <div class="wrap">
@@ -30,7 +37,7 @@
 
   <!-- TRACK 1: PUBLIC AWARENESS -->
   <div class="track-panel" id="awareness" role="tabpanel" aria-labelledby="t-awareness">
-    <div class="meta" style="margin-bottom:16px"><span class="author-badge">Authored by Vipin</span><span>Updated October 2026</span></div>
+    <div class="meta track-intro"><span class="author-badge"><img src="assets/img/vipin-nair.webp" alt="" width="26" height="26">Authored by Vipin</span><span>Updated October 2026</span></div>
 
     <h2>Jargon-free explainers</h2>
     <div class="grid grid-3">
@@ -74,7 +81,7 @@
 
   <!-- TRACK 2: MSME -->
   <div class="track-panel" id="msme" role="tabpanel" aria-labelledby="t-msme" hidden>
-    <div class="meta" style="margin-bottom:16px"><span class="author-badge">Authored by Vipin</span><span>Updated October 2026</span></div>
+    <div class="meta track-intro"><span class="author-badge"><img src="assets/img/vipin-nair.webp" alt="" width="26" height="26">Authored by Vipin</span><span>Updated October 2026</span></div>
 
     <h2>Udyam Registration: what it is and why it pays</h2>
     <div class="grid grid-2">
@@ -147,7 +154,7 @@
 
   <!-- TRACK 3: STUDENTS -->
   <div class="track-panel" id="students" role="tabpanel" aria-labelledby="t-students" hidden>
-    <div class="meta" style="margin-bottom:16px"><span class="author-badge">Authored by Vipin</span><span>Updated October 2026</span></div>
+    <div class="meta track-intro"><span class="author-badge"><img src="assets/img/vipin-nair.webp" alt="" width="26" height="26">Authored by Vipin</span><span>Updated October 2026</span></div>
     <p class="muted">Built for B.Com, M.Com, BBA, MBA, LL.B, CA, CS and CMA students. Use the memory tables for revision, the case summaries for answers that need authority, and the walkthroughs to connect theory with practice.</p>
 
     <h2>Module 1: Section-wise memory tables</h2>
@@ -262,7 +269,7 @@
     ["A rent agreement in my spouse's name lets me claim HRA without any other proof.", "HRA requires actual payment of rent; if annual rent exceeds Rs. 1 lakh, the landlord's PAN is needed. Paying rent to a spouse who owns the house is closely examined and the spouse must report the rent as income."]
   ];
   document.getElementById("myths").innerHTML = MYTHS.map(function (m) {
-    return '<button class="card myth" type="button" aria-expanded="false"><span class="label m">Myth</span><p style="color:var(--text);font-weight:600">' + m[0] + '</p><div class="fact"><span class="label f">Fact</span><p>' + m[1] + "</p></div></button>";
+    return '<button class="card myth" type="button" aria-expanded="false"><span class="label m">Myth</span><p class="q">' + m[0] + '</p><span class="hint">Tap to see the fact</span><div class="fact"><span class="label f">Fact</span><p>' + m[1] + "</p></div></button>";
   }).join("");
   document.querySelectorAll(".myth").forEach(function (b) {
     b.addEventListener("click", function () { b.setAttribute("aria-expanded", b.getAttribute("aria-expanded") === "true" ? "false" : "true"); });
