@@ -98,4 +98,51 @@
   });
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", function () { wrapTables(); });
   else wrapTables();
+  // ---------- Motion: reveal on scroll, header shadow, progress bar, back to top, counters ----------
+  var reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduce && "IntersectionObserver" in window) {
+    document.documentElement.classList.add("motion");
+    var SEL = ".section-head, .card, .panel, .update-item, .track-hero, .about-fig, .stat-grid > div, details.faq, .callout, .timeline > *";
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+    var mark = function (root) {
+      root.querySelectorAll(SEL).forEach(function (el) {
+        if (el.classList.contains("reveal") || el.closest(".site-footer, .art-toc, .article-body")) return;
+        var sib = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+        el.style.setProperty("--d", Math.min(sib, 5) * 0.07 + "s");
+        el.classList.add("reveal"); io.observe(el);
+      });
+    };
+    mark(document);
+    new MutationObserver(function (muts) {
+      muts.forEach(function (m) { m.addedNodes.forEach(function (n) { if (n.nodeType === 1) mark(n.parentElement || n); }); });
+    }).observe(document.getElementById("main") || document.body, { childList: true, subtree: true });
+  }
+
+  var nav = document.querySelector(".site-nav");
+  var bar = document.createElement("div"); bar.className = "read-progress"; bar.setAttribute("aria-hidden", "true"); document.body.appendChild(bar);
+  var top = document.createElement("button"); top.className = "to-top"; top.type = "button"; top.setAttribute("aria-label", "Back to top"); top.innerHTML = "&#8593;"; document.body.appendChild(top);
+  top.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }); });
+  function onScroll() {
+    var y = window.scrollY || 0, h = document.documentElement.scrollHeight - window.innerHeight;
+    nav.classList.toggle("scrolled", y > 8);
+    top.classList.toggle("show", y > 600);
+    bar.style.width = (h > 0 && document.querySelector(".art-layout") ? Math.min(100, y / h * 100) : 0) + "%";
+  }
+  window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+  // Count up the numbers in the portfolio stat strip once they come into view.
+  if (!reduce && "IntersectionObserver" in window) {
+    document.querySelectorAll(".stat-grid b").forEach(function (b) {
+      var m = b.textContent.match(/^(\D*)(\d+)(.*)$/); if (!m || /→|->/.test(b.textContent)) return;
+      var pre = m[1], n = +m[2], post = m[3];
+      var cio = new IntersectionObserver(function (en) {
+        if (!en[0].isIntersecting) return; cio.disconnect();
+        var t0 = performance.now();
+        (function step(t) { var k = Math.min(1, (t - t0) / 1200); b.textContent = pre + Math.round(n * (1 - Math.pow(1 - k, 3))) + post; if (k < 1) requestAnimationFrame(step); })(t0);
+      }, { threshold: 0.6 });
+      cio.observe(b);
+    });
+  }
 })();
