@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img"><title>A graduation cap resting on a stack of law books</title><rect width="480" height="300" fill="#fff7ed"/><circle cx="110" cy="80" r="70" fill="#fed7aa" opacity=".55"/>
+<g transform="translate(130 150)"><rect x="0" y="80" width="220" height="34" rx="6" fill="#1e293b"/><rect x="10" y="86" width="200" height="6" fill="#475569"/>
+<rect x="14" y="46" width="200" height="34" rx="6" fill="#ea580c"/><rect x="24" y="52" width="180" height="6" fill="#fed7aa"/>
+<rect x="4" y="12" width="200" height="34" rx="6" fill="#2563eb"/><rect x="14" y="18" width="180" height="6" fill="#bfdbfe"/>
+<text x="110" y="40" text-anchor="middle" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#ffffff">COMPANIES ACT</text>
+<text x="114" y="74" text-anchor="middle" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#ffffff">CGST ACT</text>
+<text x="110" y="108" text-anchor="middle" font-family="Georgia,serif" font-size="14" font-weight="700" fill="#ffffff">INCOME-TAX ACT</text></g>
+<g transform="translate(240 70)"><path d="M-90 40L0 0l90 40-90 40z" fill="#1e293b"/><path d="M-50 58v34c0 14 100 14 100 0V58L0 80z" fill="#475569"/><path d="M78 46v50" stroke="#fbbf24" stroke-width="5"/><circle cx="78" cy="100" r="8" fill="#fbbf24"/></g>
+<circle cx="400" cy="230" r="26" fill="#16a34a"/><path d="M388 230l9 9 16-18" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>

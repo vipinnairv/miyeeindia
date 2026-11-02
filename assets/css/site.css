@@ -218,3 +218,46 @@ button.btn, .tier, .tab { font-family: var(--font-body); }
 .mission-panel h2 { font-size: clamp(1.3rem, 2.6vw, 1.7rem); }
 .mission-panel p { color: var(--muted); }
 @media (max-width: 760px) { .mission-panel { grid-template-columns: 1fr; text-align: center; } .mission-panel img { max-width: 220px; margin: 0 auto; } }
+
+/* ---------- Layout additions for images ---------- */
+.track-hero { display: grid; grid-template-columns: 300px 1fr; gap: 28px; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); margin-bottom: 28px; }
+.track-hero img { width: 100%; height: auto; border-radius: 10px; }
+.track-hero h2 { font-size: clamp(1.25rem, 2.6vw, 1.6rem); margin-bottom: .3em; }
+.track-hero p { color: var(--muted); margin: 0; }
+.about-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 36px; align-items: center; }
+.about-grid .prose { margin: 0; max-width: none; }
+.about-fig { margin: 0; }
+.about-fig img { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); }
+@media (max-width: 860px) { .track-hero, .about-grid { grid-template-columns: 1fr; } .track-hero img, .about-fig img { max-width: 360px; margin: 0 auto; display: block; } }
+.pillar .mod-img, .mod-card .mod-img { object-fit: cover; }
+
+/* ---------- Motion ---------- */
+body { transition: background-color .3s ease, color .3s ease; }
+.site-nav { transition: box-shadow .25s ease, background-color .3s ease; }
+.site-nav.scrolled { box-shadow: 0 1px 0 var(--border), 0 8px 24px rgba(15, 23, 42, .08); }
+@keyframes cch-fade-up { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes cch-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes cch-fade { from { opacity: 0; } to { opacity: 1; } }
+.motion .page-head > .wrap > div, .motion .hero-text { animation: cch-fade-up .7s ease both; }
+.motion .page-head figure img, .motion .mission-panel img, .motion .hero-photo img { animation: cch-float 6s ease-in-out infinite; }
+.motion .hero-photo img { animation-duration: 7s; }
+.motion .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; transition-delay: var(--d, 0s); }
+.motion .reveal.in { opacity: 1; transform: none; }
+.mod-card .mod-img, .article-card .cover, .track-hero img, .about-fig img { transition: transform .5s ease; }
+.mod-card:hover .mod-img, .article-card:hover .cover { transform: scale(1.04); }
+.mod-card, .article-card { overflow: hidden; }
+.track-panel:not([hidden]) { animation: cch-fade .35s ease; }
+#app > * { animation: cch-fade .35s ease; }
+.myth .fact { animation: cch-fade .3s ease; }
+.btn { transition: transform .2s, box-shadow .2s, background .2s, border-color .2s, color .2s; }
+.read-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: linear-gradient(90deg, #e11d8f, var(--brand-solid)); z-index: 70; transition: width .1s linear; }
+.to-top { position: fixed; right: 18px; bottom: 18px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border); background: var(--surface); color: var(--text); box-shadow: var(--shadow); display: grid; place-items: center; cursor: pointer; opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .25s, transform .25s, border-color .2s; z-index: 55; font-size: 1.1rem; }
+.to-top.show { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover { border-color: var(--brand); }
+@media (prefers-reduced-motion: reduce) {
+  .motion .reveal { opacity: 1; transform: none; transition: none; }
+  .motion .page-head figure img, .motion .mission-panel img, .motion .hero-photo img, .motion .page-head > .wrap > div, .motion .hero-text { animation: none; }
+  .mod-card:hover .mod-img, .article-card:hover .cover { transform: none; }
+}
+@media print { .read-progress, .to-top { display: none !important; } .motion .reveal { opacity: 1 !important; transform: none !important; } }
+.mod-card .mod-img[src*="/scenes/"] { height: auto; aspect-ratio: 8 / 5; }
