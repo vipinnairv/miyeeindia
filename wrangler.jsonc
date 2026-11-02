@@ -1,0 +1,13 @@
+// Cloudflare Workers deployment for the Vipin Nair portfolio and Knowledge Hub.
+// The site is plain static HTML/CSS/JS, served as Workers static assets (no build step).
+{
+  "name": "miyeeindia",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  },
+  "workers_dev": true,
+  "preview_urls": true
+}
