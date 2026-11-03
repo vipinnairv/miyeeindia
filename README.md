@@ -7,6 +7,9 @@ A static single page (`index.html`). It uses the Miyee Tech Labs design system (
 - **Download Resume** serves `assets/Vipin_Nair_Resume_2026.docx`
 - **Print / Save as PDF** prints a clean resume layout
 
+## Live site
+https://miyeeindia.in, served by Cloudflare Workers static assets (`wrangler.jsonc`). Every merge to `main` redeploys automatically. `sitemap.xml` and `robots.txt` list the public pages, and `assets/img/og-image.jpg` is the social sharing image.
+
 ## Publish with GitHub Pages
 Settings → Pages → Source: *Deploy from a branch* → `main` / `(root)`.
 The site will be live at https://vipinnairv.github.io/miyeeindia/
