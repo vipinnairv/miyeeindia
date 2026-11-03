@@ -16,7 +16,15 @@
   var AUTHOR_IMG = '<img src="assets/img/vipin-nair.webp" alt="" width="26" height="26">';
   var SEARCH_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>';
 
-  function cover(domain) { return "assets/img/covers/" + domain + ".svg"; }
+  // Topic cover photos from Unsplash, hotlinked as the Unsplash API guidelines require (credited on the disclaimer page).
+  var COVERS = {
+    "mca": "https://images.unsplash.com/photo-1623051786552-e46ef84e6c07?ixid=M3wxMTIyNTA0fDB8MXxzZWFyY2h8Mnx8Y29ycG9yYXRlJTIwb2ZmaWNlJTIwYnVpbGRpbmd8ZW58MXwwfHx8MTc5MzcxOTIxMnww&ixlib=rb-4.1.0&w=960&h=400&fit=crop&crop=entropy&auto=format&q=70",
+    "sebi": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixid=M3wxMTIyNTA0fDB8MXxzZWFyY2h8MXx8c3RvY2slMjBtYXJrZXQlMjBjaGFydHxlbnwxfDB8fHwxNzkzNzE5MjA5fDA&ixlib=rb-4.1.0&w=960&h=400&fit=crop&crop=entropy&auto=format&q=70",
+    "gst": "https://images.unsplash.com/photo-1648823161626-0e839927401b?ixid=M3wxMTIyNTA0fDB8MXxzZWFyY2h8MXx8aW52b2ljZSUyMHJlY2VpcHR8ZW58MXwwfHx8MTc5MzcxOTIxMHww&ixlib=rb-4.1.0&w=960&h=400&fit=crop&crop=entropy&auto=format&q=70",
+    "income-tax": "https://images.unsplash.com/photo-1565373679580-fc0cb538f49c?ixid=M3wxMTIyNTA0fDB8MXxzZWFyY2h8Nnx8Y2FsY3VsYXRvciUyMG1vbmV5JTIwaW5kaWF8ZW58MXwwfHx8MTc5MzcxOTIxMXww&ixlib=rb-4.1.0&w=960&h=400&fit=crop&crop=entropy&auto=format&q=70",
+    "labour": "https://images.unsplash.com/photo-1577199001468-44c049e7603f?ixid=M3wxMTIyNTA0fDB8MXxzZWFyY2h8MXx8d29ya2VycyUyMGluZGlhfGVufDF8MHx8fDE3OTM3MTkyMTN8MA&ixlib=rb-4.1.0&w=960&h=400&fit=crop&crop=entropy&auto=format&q=70"
+  };
+  function cover(domain) { return COVERS[domain] || COVERS.mca; }
 
   function articles() {
     return (window.ARTICLES || []).slice().sort(function (a, b) { return b.date.localeCompare(a.date); });
@@ -54,7 +62,7 @@
       "<h1>Regulatory deep dives and the latest updates</h1>" +
       "<p>In-depth, original guides to Indian company law, SEBI regulations, GST, income tax and labour laws. Each one explains who the law applies to, how to comply step by step, the due dates, the penalties for default, and the official sources behind every statement.</p>" +
       '<div class="head-cta"><a class="btn btn-primary" href="#all-guides">Browse the guides</a><a class="btn btn-ghost" href="#updates">Latest updates</a></div>' +
-      '</div><figure><img src="assets/img/illustrations/news.svg" alt="Regulatory documents under review" width="480" height="360"></figure></div></header>' +
+      '</div><figure class="ph ph-head"><img src="https://images.unsplash.com/photo-1772588627327-1eeddcf73c11?ixid=M3wxMTIyNTA0fDB8MXxzZWFyY2h8Mnx8dGF4JTIwZG9jdW1lbnRzJTIwZGVza3xlbnwxfDB8fHwxNzkzNzE5MjAyfDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;h=675&amp;fit=crop&amp;crop=entropy&amp;auto=format&amp;q=75" alt="Reviewing tax documents with a calculator" width="900" height="675"><figcaption class="ph-credit">Photo: <a href="https://unsplash.com/@kellysikkema?utm_source=miyeeindia&utm_medium=referral" target="_blank" rel="noopener noreferrer">Kelly Sikkema</a> / <a href="https://unsplash.com/?utm_source=miyeeindia&utm_medium=referral" target="_blank" rel="noopener noreferrer">Unsplash</a></figcaption></figure></div></header>' +
       '<section class="section" id="all-guides"><div class="wrap">' +
       '<div class="hub-tools"><label class="search">' + SEARCH_ICON +
       '<span class="visually-hidden">Search articles</span><input id="q" type="search" placeholder="Search by topic, form or section, for example GSTR-9, 44AD or SDD" value="' + H.escapeHtml(state.q) + '"></label></div>' +
