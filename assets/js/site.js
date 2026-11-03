@@ -53,7 +53,7 @@
     }
     return '<footer class="site-footer"><div class="wrap footer-grid">' +
       '<div class="footer-brand"><a class="brand" href="index.html"><span class="brand-text">Vipin <span>Nair</span></span></a>' +
-      "<p>Finance and accounts professional, CA Inter and GST Practitioner, based in Ahmedabad. I also write free, source-backed guides on Indian corporate, tax and labour compliance as a not-for-profit community service.</p><p class=\"fineprint\">Proud Ancient India, rich with young talent: together, we can lead a better nation.</p>" +
+      "<p>Finance and accounts professional, CA Finalist and GST Practitioner, based in Ahmedabad. I also write free, source-backed guides on Indian corporate, tax and labour compliance as a not-for-profit community service.</p><p class=\"fineprint\">Proud Ancient India, rich with young talent: together, we can lead a better nation.</p>" +
       '<p class="fineprint"><a href="assets/Vipin_Nair_Resume_2026.docx" download>Download resume</a></p></div>' +
       col("Portfolio", [["About", "index.html#about"], ["Experience", "index.html#experience"], ["Achievements", "index.html#achievements"], ["Skills", "index.html#skills"], ["Projects", "index.html#projects"], ["Education", "index.html#education"]]) +
       col("Knowledge & Community", [["News &amp; Blogs", "news.html"], ["Regulatory updates", "news.html#updates"], ["Community Help", "community.html"], ["Support Us", "support.html"], ["Gau Seva", "gaushala.html"], ["Mission &amp; Disclaimer", "disclaimer.html"], ["Privacy &amp; DPDP Act", "privacy.html"]]) +
