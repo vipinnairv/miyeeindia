@@ -260,4 +260,26 @@ body { transition: background-color .3s ease, color .3s ease; }
   .mod-card:hover .mod-img, .article-card:hover .cover { transform: none; }
 }
 @media print { .read-progress, .to-top { display: none !important; } .motion .reveal { opacity: 1 !important; transform: none !important; } }
-.mod-card .mod-img[src*="/scenes/"] { height: auto; aspect-ratio: 8 / 5; }
+
+/* ---------- Real photographs (hotlinked from Unsplash) with credits ---------- */
+.ph { position: relative; margin: 0; overflow: hidden; }
+.ph img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ph-credit { position: absolute; right: 8px; bottom: 8px; max-width: calc(100% - 16px); padding: 3px 8px; border-radius: 6px; background: rgba(15, 23, 42, .62); color: #fff; font-size: .68rem; line-height: 1.4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; backdrop-filter: blur(2px); }
+.ph-credit a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
+.page-head figure.ph-head { border-radius: 20px; box-shadow: var(--shadow-hover); max-width: 460px; margin-left: auto; aspect-ratio: 4 / 3; }
+.page-head figure.ph-head img { max-width: none; margin: 0; }
+@media (max-width: 860px) { .page-head figure.ph-head { max-width: 420px; margin: 0 auto; aspect-ratio: 16 / 10; } }
+.mod-card figure.mod-img { height: auto; aspect-ratio: 8 / 5; max-width: none; }
+.mod-card:hover figure.mod-img { transform: none; }
+.mod-card figure.mod-img img { transition: transform .5s ease; }
+.mod-card:hover figure.mod-img img { transform: scale(1.05); }
+.track-hero .ph { border-radius: 10px; aspect-ratio: 8 / 5; }
+.about-fig.ph { border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid var(--border); aspect-ratio: 16 / 10; }
+.about-fig.ph img { border: 0; border-radius: 0; box-shadow: none; }
+.mission-panel .ph { border-radius: 14px; aspect-ratio: 4 / 3; }
+.article-card .cover { aspect-ratio: 12 / 5; background: var(--bg-elev); }
+.credits-list { padding-left: 1.2em; color: var(--muted); }
+.credits-list li { margin-bottom: .35em; }
+@keyframes cch-photo-in { from { opacity: 0; transform: scale(1.04); } to { opacity: 1; transform: none; } }
+.motion .page-head figure.ph-head img, .motion .mission-panel .ph img { animation: cch-photo-in 1s ease both; }
+@media (max-width: 760px) { .mod-card figure.mod-img { margin: -22px -22px 16px; width: calc(100% + 44px); } }
