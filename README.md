@@ -25,3 +25,12 @@ The same site also hosts the Compliance Community Hub, linked from the top menu:
 | `gaushala.html` | Gau Seva initiative |
 
 Every page shares one theme: `assets/style.css` (design tokens), `assets/css/site.css` (shared components), `assets/theme.js` (light/dark and menu) and `assets/js/site.js` (common header and footer). `assets/portfolio.css` styles the portfolio page only. Article content lives in `assets/data/articles-*.js` (`window.ARTICLES`), updates in `assets/data/updates.js`, the hub logic in `assets/js/hub.js`, and photographs (Unsplash License) are stored in `assets/img/photos`, with a closing note in `disclaimer.html`. Every article shows "Authored by Vipin" and ends with a Statutory References and Official Sources section. No em dashes or en dashes are used.
+
+## Guide pages and SEO
+Each guide has its own static page in `guides/`, generated from `assets/data/articles-*.js` so search engines can index it. After editing or adding a guide, run:
+
+```
+node tools/build-guides.js
+```
+
+This rewrites `guides/*.html` (with Article and breadcrumb structured data and related links) and `sitemap.xml`. The home page carries Person, WebSite and ProfilePage structured data, the News hub a CollectionPage list, and the community pages FAQPage data.

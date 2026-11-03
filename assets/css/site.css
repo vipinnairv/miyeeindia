@@ -379,3 +379,11 @@ h3 { font-weight: 600; }
 .mod-card:hover figure.mod-img img, .article-card:hover .cover { transform: scale(1.02); }
 .ph-credit { font-size: .62rem; opacity: .7; transition: opacity .2s; }
 .ph:hover .ph-credit { opacity: 1; }
+
+/* Static guide pages */
+.crumbs { font-size: .85rem; color: var(--muted); margin: 0 0 14px; }
+.crumbs a { color: var(--muted); text-decoration: none; }
+.crumbs a:hover { color: var(--brand); text-decoration: underline; }
+.related { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); }
+.related h2 { font-size: 1.3rem; }
+.related .article-card h3 { font-size: 1rem; }
