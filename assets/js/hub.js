@@ -56,11 +56,11 @@
 
   function renderHub() {
     var app = document.getElementById("app");
-    document.title = "News & Blogs | Vipin Nair";
+    document.title = "Vipin\u2019s GST, Income Tax & Finance Compliance Guides | Vipin Nair";
     app.innerHTML =
       '<header class="page-head split"><div class="wrap"><div>' +
       '<span class="eyebrow">News &amp; Blogs</span>' +
-      "<h1>Regulatory deep dives and the latest updates</h1>" +
+      "<h1>Vipin\u2019s guides to GST, income tax and finance compliance</h1>" +
       "<p>In-depth, original guides to Indian company law, SEBI regulations, GST, income tax and labour laws. Each one explains who the law applies to, how to comply step by step, the due dates, the penalties for default, and the official sources behind every statement.</p>" +
       '<div class="head-cta"><a class="btn btn-primary" href="#all-guides">Browse the guides</a><a class="btn btn-ghost" href="#updates">Latest updates</a></div>' +
       '</div><figure class="ph ph-head"><img src="assets/img/photos/1772588627327-1eeddcf73c-900x675.jpg" alt="Reviewing tax documents with a calculator" width="900" height="675"></figure></div></header>' +
