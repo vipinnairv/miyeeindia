@@ -1,0 +1,19 @@
+# Cache rules for Cloudflare Workers static assets.
+# Pages are revalidated on every visit so updates appear immediately;
+# styles and scripts are cached briefly; images and the resume longer.
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/assets/css/*
+  Cache-Control: public, max-age=300, must-revalidate
+
+/assets/js/*
+  Cache-Control: public, max-age=300, must-revalidate
+
+/assets/data/*
+  Cache-Control: public, max-age=300, must-revalidate
+
+/assets/img/*
+  Cache-Control: public, max-age=86400
