@@ -1,0 +1,6 @@
+# Search engines are welcome to index this site.
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://miyeeindia.in/sitemap.xml
