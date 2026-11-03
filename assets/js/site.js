@@ -30,7 +30,7 @@
     var links = NAV.map(function (n) {
       return '<li><a href="' + n.href + '"' + (n.id === current ? ' aria-current="page"' : "") + ">" + esc(n.label) + "</a></li>";
     }).join("");
-    return '<a class="skip" href="#main">Skip to content</a>' +
+    return '<a class="skip" href="' + (document.querySelector("base") ? location.pathname : "") + '#main">Skip to content</a>' +
       '<header class="site-nav"><div class="wrap nav-inner">' +
       '<a class="brand" href="index.html"><span class="brand-text">Vipin <span>Nair</span></span></a>' +
       '<nav class="nav-tools" aria-label="Main"><ul class="nav-links" id="nav-links">' + links + "</ul>" +

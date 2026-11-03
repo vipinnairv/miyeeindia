@@ -1,7 +1,8 @@
-/* News & Blogs hub and article reader. Routes:
-   news.html                      hub (articles and updates)
-   news.html#/article/<id>        reader view for one article
-   news.html#updates              hub scrolled to the updates feed */
+/* News & Blogs hub. Each guide has its own static page in /guides (built by
+   tools/build-guides.js) so search engines can index it.
+   news.html                      hub (guides and updates)
+   news.html#updates              hub scrolled to the updates feed
+   news.html#/article/<id>        old link format, redirected to guides/<id>.html */
 (function () {
   var DOMAINS = [
     { id: "all", label: "All topics" },
@@ -38,7 +39,7 @@
   }
 
   function cardHtml(a) {
-    return '<a class="card article-card" href="#/article/' + a.id + '">' +
+    return '<a class="card article-card" href="guides/' + a.id + '.html">' +
       '<img class="cover" src="' + cover(a.domain) + '" alt="" loading="lazy" width="480" height="200">' +
       '<div class="body"><div class="meta"><span class="pill ' + a.domain + '">' + H.escapeHtml(a.domainLabel) + '</span><span class="pill">' + a.readTime + "</span></div>" +
       "<h3>" + H.escapeHtml(a.title) + "</h3><p>" + H.escapeHtml(a.summary) + "</p>" +
@@ -96,77 +97,14 @@
     document.getElementById("updates-list").innerHTML = ups.length ? ups.map(updateHtml).join("") : '<p class="muted">No updates match the current filter.</p>';
   }
 
-  function slug(s, used) {
-    var base = s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60) || "section";
-    var id = base, n = 2; while (used[id]) id = base + "-" + n++; used[id] = 1; return id;
-  }
-
-  function renderArticle(id) {
-    var a = articles().find(function (x) { return x.id === id; });
-    var app = document.getElementById("app");
-    if (!a) {
-      app.innerHTML = '<div class="wrap section"><h1>Guide not found</h1><p><a href="news.html">Back to News &amp; Blogs</a></p></div>';
-      return;
-    }
-    document.title = a.title + " | Vipin Nair";
-    app.innerHTML =
-      '<div class="wrap art-layout"><article class="art-main">' +
-      '<p style="margin:0 0 16px"><a href="news.html">&larr; All guides</a></p>' +
-      '<header class="art-head"><div class="meta"><span class="pill ' + a.domain + '">' + H.escapeHtml(a.domainLabel) + '</span><span class="pill">' + a.readTime + "</span></div>" +
-      '<h1 style="margin-top:14px">' + H.escapeHtml(a.title) + "</h1>" +
-      '<div class="meta"><span class="author-badge">' + AUTHOR_IMG + H.escapeHtml(a.author) + '</span><span>Published <time datetime="' + a.date + '">' + H.formatDate(a.date) + "</time></span></div>" +
-      '<div class="art-actions"><button class="btn" type="button" id="copy-link">Copy link</button>' +
-      '<button class="btn" type="button" onclick="window.print()">Print or save as PDF</button>' +
-      '<button class="btn toc-btn" type="button" id="toc-toggle" aria-expanded="false">Contents</button></div>' +
-      '<p class="muted">' + H.escapeHtml(a.summary) + "</p></header>" +
-      '<div class="article-body" id="body">' + a.body + "</div>" +
-      '<p style="margin-top:28px"><span class="author-badge">' + AUTHOR_IMG + H.escapeHtml(a.author) + "</span></p>" +
-      '<div class="callout"><strong>Educational content.</strong> This guide explains the law in general terms and is not professional advice. Verify thresholds, rates and due dates against the latest notifications on the official portals cited above before acting.</div>' +
-      '</article><nav class="art-toc" id="toc" aria-label="Table of contents"><h2>On this page</h2><ol id="toc-list"></ol></nav></div>';
-
-    var body = document.getElementById("body"), used = {}, items = [];
-    body.querySelectorAll("h2").forEach(function (h) {
-      h.id = slug(h.textContent, used);
-      items.push('<li><a href="#' + h.id + '" data-id="' + h.id + '">' + H.escapeHtml(h.textContent) + "</a></li>");
-    });
-    document.getElementById("toc-list").innerHTML = items.join("");
-    H.wrapTables(body);
-
-    // Scroll to headings without replacing the router hash.
-    document.getElementById("toc").addEventListener("click", function (e) {
-      var link = e.target.closest("a[data-id]"); if (!link) return;
-      e.preventDefault();
-      document.getElementById(link.getAttribute("data-id")).scrollIntoView({ behavior: "smooth" });
-      document.getElementById("toc").classList.remove("open");
-    });
-    var tt = document.getElementById("toc-toggle");
-    tt.addEventListener("click", function () {
-      var open = document.getElementById("toc").classList.toggle("open");
-      tt.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-    document.getElementById("copy-link").addEventListener("click", function () {
-      H.copyText(location.href.split("#")[0] + "#/article/" + a.id);
-    });
-
-    if ("IntersectionObserver" in window) {
-      var links = {}; document.querySelectorAll("#toc a").forEach(function (l) { links[l.getAttribute("data-id")] = l; });
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (en) {
-          if (en.isIntersecting) Object.keys(links).forEach(function (k) { links[k].classList.toggle("active", k === en.target.id); });
-        });
-      }, { rootMargin: "-90px 0px -70% 0px" });
-      body.querySelectorAll("h2").forEach(function (h) { io.observe(h); });
-    }
-    window.scrollTo(0, 0);
-  }
-
   function route() {
     var m = location.hash.match(/^#\/article\/([\w-]+)/);
-    if (m) renderArticle(m[1]); else renderHub();
+    if (m) { location.replace("guides/" + m[1] + ".html"); return; }
+    renderHub();
   }
 
   document.addEventListener("DOMContentLoaded", route);
   window.addEventListener("hashchange", function () {
-    if (/^#\/article\//.test(location.hash) || !document.getElementById("cards")) route();
+    if (/^#\/article\//.test(location.hash)) route();
   });
 })();
