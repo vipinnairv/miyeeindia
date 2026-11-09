@@ -39,7 +39,7 @@
   }
 
   function cardHtml(a) {
-    return '<a class="card article-card" href="guides/' + a.id + '.html">' +
+    return '<a class="card article-card" href="guides/' + a.id + '">' +
       '<img class="cover" src="' + cover(a.domain) + '" alt="" loading="lazy" width="480" height="200">' +
       '<div class="body"><div class="meta"><span class="pill ' + a.domain + '">' + H.escapeHtml(a.domainLabel) + '</span><span class="pill">' + a.readTime + "</span></div>" +
       "<h3>" + H.escapeHtml(a.title) + "</h3><p>" + H.escapeHtml(a.summary) + "</p>" +
@@ -99,7 +99,7 @@
 
   function route() {
     var m = location.hash.match(/^#\/article\/([\w-]+)/);
-    if (m) { location.replace("guides/" + m[1] + ".html"); return; }
+    if (m) { location.replace("guides/" + m[1]); return; }
     renderHub();
   }
 

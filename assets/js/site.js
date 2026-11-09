@@ -5,19 +5,19 @@
    current menu item. */
 (function () {
   var NAV = [
-    { id: "about", label: "About", href: "index.html#about" },
-    { id: "experience", label: "Experience", href: "index.html#experience" },
-    { id: "achievements", label: "Achievements", href: "index.html#achievements" },
-    { id: "projects", label: "Projects", href: "index.html#projects" },
-    { id: "news", label: "News & Blogs", href: "news.html" },
-    { id: "community", label: "Community", href: "community.html" },
-    { id: "contact", label: "Contact", href: "index.html#contact" }
+    { id: "about", label: "About", href: "./#about" },
+    { id: "experience", label: "Experience", href: "./#experience" },
+    { id: "achievements", label: "Achievements", href: "./#achievements" },
+    { id: "projects", label: "Projects", href: "./#projects" },
+    { id: "news", label: "News & Blogs", href: "news" },
+    { id: "community", label: "Community", href: "community" },
+    { id: "contact", label: "Contact", href: "./#contact" }
   ];
   // Community pages share one menu entry and a sub-menu, keeping them apart from the portfolio.
   var COMMUNITY = [
-    { id: "community", label: "Community Help", href: "community.html" },
-    { id: "support", label: "Support Us", href: "support.html" },
-    { id: "gaushala", label: "Gau Seva", href: "gaushala.html" }
+    { id: "community", label: "Community Help", href: "community" },
+    { id: "support", label: "Support Us", href: "support" },
+    { id: "gaushala", label: "Gau Seva", href: "gaushala" }
   ];
 
   function esc(s) {
@@ -32,7 +32,7 @@
     }).join("");
     return '<a class="skip" href="' + (document.querySelector("base") ? location.pathname : "") + '#main">Skip to content</a>' +
       '<header class="site-nav"><div class="wrap nav-inner">' +
-      '<a class="brand" href="index.html"><span class="brand-text">Vipin <span>Nair</span></span></a>' +
+      '<a class="brand" href="./"><span class="brand-text">Vipin <span>Nair</span></span></a>' +
       '<nav class="nav-tools" aria-label="Main"><ul class="nav-links" id="nav-links">' + links + "</ul>" +
       '<button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle theme">&#9728;</button>' +
       '<button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">&#9776;</button>' +
@@ -52,15 +52,15 @@
         items.map(function (i) { return '<li><a href="' + i[1] + '"' + (i[2] ? ' target="_blank" rel="noopener noreferrer"' : "") + ">" + i[0] + "</a></li>"; }).join("") + "</ul></nav>";
     }
     return '<footer class="site-footer"><div class="wrap footer-grid">' +
-      '<div class="footer-brand"><a class="brand" href="index.html"><span class="brand-text">Vipin <span>Nair</span></span></a>' +
+      '<div class="footer-brand"><a class="brand" href="./"><span class="brand-text">Vipin <span>Nair</span></span></a>' +
       "<p>Finance and accounts professional, CA Finalist and GST Practitioner, based in Ahmedabad. I also write free, source-backed guides on Indian corporate, tax and labour compliance as a not-for-profit community service.</p><p class=\"fineprint\">Proud Ancient India, rich with young talent: together, we can lead a better nation.</p>" +
       '<p class="fineprint"><a href="assets/Vipin_Nair_Resume_2026.docx" download>Download resume</a></p></div>' +
-      col("Portfolio", [["About", "index.html#about"], ["Experience", "index.html#experience"], ["Achievements", "index.html#achievements"], ["Skills", "index.html#skills"], ["Projects", "index.html#projects"], ["Education", "index.html#education"]]) +
-      col("Knowledge & Community", [["News &amp; Blogs", "news.html"], ["Regulatory updates", "news.html#updates"], ["Community Help", "community.html"], ["Support Us", "support.html"], ["Gau Seva", "gaushala.html"], ["Mission &amp; Disclaimer", "disclaimer.html"], ["Privacy &amp; DPDP Act", "privacy.html"]]) +
+      col("Portfolio", [["About", "./#about"], ["Experience", "./#experience"], ["Achievements", "./#achievements"], ["Skills", "./#skills"], ["Projects", "./#projects"], ["Education", "./#education"]]) +
+      col("Knowledge & Community", [["News &amp; Blogs", "news"], ["Regulatory updates", "news#updates"], ["Community Help", "community"], ["Support Us", "support"], ["Gau Seva", "gaushala"], ["Mission &amp; Disclaimer", "disclaimer"], ["Privacy &amp; DPDP Act", "privacy"]]) +
       col("Connect", [[MAIL + " audit.vipin@gmail.com", "mailto:audit.vipin@gmail.com"], [LI + " LinkedIn", "https://www.linkedin.com/in/vipin-nair-22a789207/", 1], [X + " X (Twitter)", "https://x.com/vipinnairv", 1], ["GitHub", "https://github.com/vipinnairv", 1]]) +
       "</div>" +
-      '<div class="wrap footer-bottom"><p>&copy; ' + new Date().getFullYear() + " Vipin Nair. All rights reserved.</p><p><a href=\"disclaimer.html\">Disclaimer</a> &middot; <a href=\"privacy.html\">Privacy &amp; DPDP Act</a> &middot; All articles authored by Vipin</p></div>" +
-      '<div class="wrap footer-disclaimer"><p><strong>Disclaimer:</strong> this is a non-commercial, not-for-profit initiative undertaken purely for community and social service. The guides on this site are for education and general information only. They are not legal, tax or professional advice. Laws, rates and due dates change through notifications and circulars, so please verify with the official source before acting. <a href="disclaimer.html">Read the full disclaimer</a>.</p></div>' +
+      '<div class="wrap footer-bottom"><p>&copy; ' + new Date().getFullYear() + " Vipin Nair. All rights reserved.</p><p><a href=\"disclaimer\">Disclaimer</a> &middot; <a href=\"privacy\">Privacy &amp; DPDP Act</a> &middot; All articles authored by Vipin</p></div>" +
+      '<div class="wrap footer-disclaimer"><p><strong>Disclaimer:</strong> this is a non-commercial, not-for-profit initiative undertaken purely for community and social service. The guides on this site are for education and general information only. They are not legal, tax or professional advice. Laws, rates and due dates change through notifications and circulars, so please verify with the official source before acting. <a href="disclaimer">Read the full disclaimer</a>.</p></div>' +
       "</footer>";
   }
 
