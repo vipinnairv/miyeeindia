@@ -92,7 +92,7 @@ ${ld.map((o) => '<script type="application/ld+json">' + JSON.stringify(o) + "</s
 <body data-page="news">
 <main id="main">
 <div class="wrap art-layout"><article class="art-main">
-<nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a> <span aria-hidden="true">/</span> <a href="news.html">News &amp; Blogs</a> <span aria-hidden="true">/</span> <span>${esc(a.domainLabel)}</span></nav>
+<nav class="crumbs" aria-label="Breadcrumb"><a href="./">Home</a> <span aria-hidden="true">/</span> <a href="news">News &amp; Blogs</a> <span aria-hidden="true">/</span> <span>${esc(a.domainLabel)}</span></nav>
 <header class="art-head"><div class="meta"><span class="pill ${a.domain}">${esc(a.domainLabel)}</span><span class="pill">${esc(a.readTime)}</span></div>
 <h1 style="margin-top:14px">${esc(a.title)}</h1>
 <div class="meta"><span class="author-badge"><img src="assets/img/vipin-nair.webp" alt="" width="26" height="26">${esc(a.author)}</span><span>Published <time datetime="${a.date}">${fmtDate(a.date)}</time></span></div>
@@ -102,7 +102,7 @@ ${ld.map((o) => '<script type="application/ld+json">' + JSON.stringify(o) + "</s
 <p style="margin-top:28px"><span class="author-badge"><img src="assets/img/vipin-nair.webp" alt="" width="26" height="26">${esc(a.author)}</span></p>
 <div class="callout"><strong>Educational content.</strong> This guide explains the law in general terms and is not professional advice. Verify thresholds, rates and due dates against the latest notifications on the official portals cited above before acting.</div>
 <section class="related" aria-label="Related guides"><h2>Related guides</h2><div class="grid grid-3">
-${related.map((r) => `<a class="card article-card" href="guides/${r.id}.html"><div class="body"><div class="meta"><span class="pill ${r.domain}">${esc(r.domainLabel)}</span><span class="pill">${esc(r.readTime)}</span></div><h3>${esc(r.title)}</h3></div></a>`).join("\n")}
+${related.map((r) => `<a class="card article-card" href="guides/${r.id}"><div class="body"><div class="meta"><span class="pill ${r.domain}">${esc(r.domainLabel)}</span><span class="pill">${esc(r.readTime)}</span></div><h3>${esc(r.title)}</h3></div></a>`).join("\n")}
 </div></section>
 </article><nav class="art-toc" id="toc" aria-label="Table of contents"><h2>On this page</h2><ol>
 ${toc.map(([id, t]) => `<li><a href="#${id}" data-id="${id}">${esc(t)}</a></li>`).join("\n")}
